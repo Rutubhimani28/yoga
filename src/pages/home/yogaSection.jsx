@@ -1,5 +1,6 @@
 import { Typography, Grid, Box } from "@mui/material";
 import bg2 from "../../assets/images/bg_2.jpg";
+import lotus from "../../assets/images/lotus.png";
 const YogaSection = () => {
   return (
     <Grid
@@ -28,15 +29,22 @@ const YogaSection = () => {
         px={{ xs: 2, sm: 3, md: 4 }}
       >
         <Typography
-          variant="h5"
+          variant="h4"
           component="h2"
           gutterBottom
           align="center"
           textTransform={"uppercase"}
           textAlign={"left"}
+          className=" !font-bold"
         >
-          Strengthen Body, Calm Mind
+          Life in Divine Yoga{" "}
         </Typography>
+        <Box className="flex justify-around w-120">
+          <img src={lotus} width={100} height={100} alt="Lotus" />
+          <Typography variant="h6" className="!my-6 ps-5">
+            "I am standing on my own altar, The Poses are my prayers"
+          </Typography>
+        </Box>
         <Typography
           variant="body1"
           color="text.secondary"
