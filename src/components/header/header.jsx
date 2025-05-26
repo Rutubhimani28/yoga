@@ -82,7 +82,8 @@ const Header = () => {
           <div className="md:hidden">
             <IconButton
               onClick={toggleDrawer}
-              sx={{ color: isScrolled ? "black" : "white" }}
+              className={`${ isScrolled ? "text-black" : "text-white"} `}
+              // sx={{ color isScrolled ? "black" : "white" }}
             >
               <MenuIcon />
             </IconButton>
