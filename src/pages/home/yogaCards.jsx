@@ -9,19 +9,19 @@ const YogaCards = () => {
       title: "Outdoor Activities",
       description:
         "Reconnect with nature through our outdoor yoga sessions, where you can harmonize your breath with the gentle breeze and embrace the healing energy of the sun.",
-      icon: <WbSunnyIcon color="warning" sx={{ fontSize: 40 }} />,
+      icon: <WbSunnyIcon color="warning" className="font-[40px]" />,
     },
     {
       title: "Experienced Trainers",
       description:
         "Practice safely and mindfully with guidance from our certified yoga instructors, dedicated to nurturing your body, mind, and spirit at every step.",
-      icon: <PeopleIcon color="primary" sx={{ fontSize: 40 }} />,
+      icon: <PeopleIcon color="primary" className="font-[40px]" />,
     },
     {
       title: "Happy Environment",
       description:
         "Join a supportive and uplifting community where positivity flows freely, fostering inner peace and joyful transformation through yoga.",
-      icon: <EmojiEmotionsIcon color="secondary" sx={{ fontSize: 40 }} />,
+      icon: <EmojiEmotionsIcon color="secondary" className="font-[40px]" />,
     },
   ];
   return (

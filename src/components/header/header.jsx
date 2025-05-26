@@ -115,18 +115,11 @@ const Header = () => {
             >
               <Button
                 fullWidth
-                className={`justify-start text-left normal-case ${
+                className={`justify-start text-left normal-case rounded-sm px-4 py-2 mb-1 ${
                   isActive(item.path)
                     ? "!text-gray-800 !bg-gray-100 font-medium"
                     : "!text-gray-600 hover:!bg-gray-100"
                 }`}
-                sx={{
-                  justifyContent: "flex-start",
-                  textTransform: "none",
-                  borderRadius: "4px",
-                  padding: "8px 16px",
-                  marginBottom: "4px",
-                }}
               >
                 {item.label}
                 {isActive(item.path) && (

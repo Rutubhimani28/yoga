@@ -15,101 +15,39 @@ const YogaDetails = () => {
   return (
     <Box
       component="section"
-      sx={{
-        position: "relative",
-        overflow: "hidden",
-        height: "400px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        [theme.breakpoints.up("md")]: {
-          height: "500px",
-        },
-      }}
+      className="relative overflow-hidden h-[400px] md:h-[500px] flex items-center justify-center"
     >
       <Box
         component={motion.div}
-        sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          backgroundImage: `url(${aboutScrollImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-          zIndex: -1,
-          "&::after": {
-            content: '""',
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0,0,0,0.4)",
-          },
-        }}
+        className="yoga-Details-img absolute top-0 left-0 w-full h-full bg-cover bg-center bg-fixed z-[-1] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full  before:bg-[rgba(0,0,0,0.4)] "
       />
 
       <Grid
         container
         spacing={4}
         justifyContent="center"
-        sx={{
-          maxWidth: "1200px",
-          mx: "auto",
-          px: 2,
-        }}
+        className="max-w-[1200px] mx-auto px-2"
       >
         {stats.map((stat, index) => (
           <Grid
             item
-            xs={6}
-            md={3}
+            size={{ xs: 6, md: 3 }}
             key={index}
-            sx={{
-              textAlign: "center",
-            }}
+            className="text-center"
           >
             <Box
-              sx={{
-                p: 3,
-                backdropFilter: "blur(4px)",
-                backgroundColor: "rgba(255,255,255,0.1)",
-                borderRadius: 2,
-                transition: "transform 0.3s",
-                "&:hover": {
-                  transform: "translateY(-5px)",
-                  backgroundColor: "rgba(255,255,255,0.2)",
-                },
-              }}
+              className="p-3 backdrop-blur-sm bg-[rgba(255,255,255,0.1)] rounded-md transition-transform duration-300 hover:-translate-y-1 hover:bg-[rgba(255,255,255,0.2)]"
             >
               <Typography
                 variant="h3"
                 component="div"
-                sx={{
-                  fontWeight: "bold",
-                  color: "white",
-                  mb: 1,
-                  [theme.breakpoints.up("md")]: {
-                    fontSize: "3rem",
-                  },
-                }}
+                class="font-bold text-white mb-1 md:text-[3rem]"
               >
                 {stat.value}
               </Typography>
               <Typography
                 variant="body1"
-                sx={{
-                  color: "white",
-                  textTransform: "uppercase",
-                  letterSpacing: "1px",
-                  fontSize: "0.875rem",
-                  [theme.breakpoints.up("md")]: {
-                    fontSize: "1rem",
-                  },
-                }}
+                className="text-white uppercase tracking-[1px] text-[0.875rem] md:text-[1rem] lett"
               >
                 {stat.label}
               </Typography>
