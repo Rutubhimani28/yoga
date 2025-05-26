@@ -221,9 +221,9 @@ const CalenderYoga = () => {
 
     if (!event) {
       return (
-        <div className="flex justify-center items-center text-gray-400 text-xl">
+        <Box className="flex justify-center items-center text-gray-400 text-xl">
           ×
-        </div>
+        </Box>
       );
     }
     return (
