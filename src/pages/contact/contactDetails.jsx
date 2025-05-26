@@ -37,7 +37,7 @@ const ContactDetails = () => {
               className="flex flex-col items-center !text-gray-700"
             >
               <Box className="bg-gray-700 hover:bg-gray-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all duration-200 ease-in-out transform hover:scale-105">
-                {React.cloneElement(item.icon, { sx: { color: "white" } })}
+                {item.icon}
               </Box>
 
               <Typography variant="subtitle1" className="font-semibold">

@@ -13,8 +13,7 @@ const BlogHero = () => {
         <Breadcrumbs
           separator="›"
           aria-label="breadcrumb"
-          className="flex justify-center mb-3 sm:mb-4"
-          sx={{ color: "white" }}
+          className="flex justify-center mb-3 sm:mb-4 text-white"
         >
           <Link underline="hover" color="inherit" href="/">
             Home
@@ -24,8 +23,7 @@ const BlogHero = () => {
 
         <Typography
           variant="h2"
-          className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide leading-snug"
-          sx={{ color: "white" }}
+          className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide leading-snug text-white"
         >
           Blog
         </Typography>

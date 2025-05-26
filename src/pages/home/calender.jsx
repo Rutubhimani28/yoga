@@ -253,30 +253,22 @@ const CalenderYoga = () => {
             align="center"
             mb={2}
             gutterBottom
-            sx={{ fontWeight: "bold" }}
+            className="!font-bold"
           >
             YOGA SCHEDULE
           </Typography>
         )}
         <Box
-          sx={{
-            overflowX: "auto",
-            border: "1px solid #ccc",
-            borderRadius: 2,
-          }}
+          className="overflow-x-auto border border-[#ccc] rounded-md"
         >
-          <Table sx={{ minWidth: 700 }}>
+          <Table className="min-w-[700px]">
             <TableHead>
               <TableRow>
                 {days.map((day) => (
                   <TableCell
                     key={day}
                     align="center"
-                    sx={{
-                      fontWeight: "bold",
-                      fontSize: "1rem",
-                      border: "1px solid #ccc",
-                    }}
+                    className="!font-bold text-base border border-[#ccc]"
                   >
                     {day}
                   </TableCell>
@@ -289,11 +281,8 @@ const CalenderYoga = () => {
                   {days.map((day) => (
                     <TableCell
                       key={day}
-                      sx={{
-                        padding: 0,
-                        height: 100,
-                        border: "1px solid #ccc",
-                      }}
+                      className="!p-0 border border-[#ccc] calender-cell"
+                    // style="height: 100px;" 
                     >
                       {renderCellContent(day, week)}
                     </TableCell>
@@ -307,14 +296,14 @@ const CalenderYoga = () => {
         <Box display="flex" justifyContent="space-between" mt={3}>
           <Button
             onClick={handlePrevMonth}
-            className=" !bg-gradient-to-r from-gray-600 to-gray-800 !text-white py-3 px-4 rounded-lg font-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded mr-2"
+            className=" !bg-gradient-to-r from-gray-600 to-gray-800 !text-white font-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded mr-2"
           >
             ← {currentMonth.subtract(1, "month").format("MMMM YYYY")}
           </Button>
 
           <Button
             onClick={handleNextMonth}
-            className="!bg-gradient-to-r from-gray-600 to-gray-800 !text-white py-3 px-4 rounded-lg font-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded"
+            className="!bg-gradient-to-r from-gray-600 to-gray-800 !text-white  font-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded"
           >
             {currentMonth.add(1, "month").format("MMMM YYYY")} →
           </Button>
