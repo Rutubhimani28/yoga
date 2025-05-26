@@ -2,6 +2,7 @@ import { Typography, Grid, Box } from "@mui/material";
 import bacImage from "../../assets/images/bg_3.jpg";
 import aboutImg from "../../assets/images/about.png";
 const YogaContent = () => {
+  
   return (
     <Grid
       container

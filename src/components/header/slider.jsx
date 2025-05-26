@@ -42,19 +42,6 @@ const Slider = () => {
       {slides.map((slide, index) => (
         <Box
           key={index}
-          // sx={{
-          //   position: "absolute",
-          //   top: 0,
-          //   left: 0,
-          //   width: "100%",
-          //   height: "100%",
-          //   transition: "opacity 1s ease",
-          //   opacity: index === current ? 1 : 0,
-          //   zIndex: index === current ? 10 : 0,
-          //   display: "flex",
-          //   alignItems: "center",
-          //   justifyContent: "flex-start",
-          // }}
           className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out flex items-center justify-start ${
             index === current ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}

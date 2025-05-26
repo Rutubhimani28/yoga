@@ -4,6 +4,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 
 const YogaCards = () => {
+
   const yogaFeatures = [
     {
       title: "Outdoor Activities",
@@ -24,6 +25,7 @@ const YogaCards = () => {
       icon: <EmojiEmotionsIcon color="secondary" className="font-[40px]" />,
     },
   ];
+  
   return (
     <Grid
       container
