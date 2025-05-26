@@ -37,7 +37,7 @@ const YogaCards = () => {
       {yogaFeatures.map((feature, index) => (
         <Grid
           item
-          size={{ xs: 12, sm: 6, md: 3 }}
+          size={{ xs: 12, sm: 6, md: 6 }}
           key={index}
           display="flex"
           className="p-3 md:!p-6"
