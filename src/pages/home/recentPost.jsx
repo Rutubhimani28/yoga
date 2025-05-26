@@ -92,22 +92,21 @@ const RecentPost = () => {
                 <div className="mt-4">
                   <Link
                     to={pathname}
-                    onClick={() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
-                    }}
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
                   >
-                    <Button className="!rounded-full !min-w-0 !p-2 !border-gray-500 hover:!border-grey-800">
-                      <ChevronRight className="w-5 h-5 text-gray-700 hover:text-grey-600" />
+                    <Button className="!rounded-full !min-w-0 !p-2 !border-gray-500 hover:!border-gray-800">
+                      <ChevronRight className="w-5 h-5 text-gray-700 hover:text-gray-600" />
                     </Button>
                   </Link>
                 </div>
               </CardContent>
             </Card>
           ))}
-        </div>
-        {pathname == "/blog" && (
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {posts1.map((post) => (
+
+          {pathname === "/blog" &&
+            posts1.map((post) => (
               <Card
                 key={post.id}
                 className="shadow-lg rounded-xl overflow-hidden"
@@ -133,20 +132,19 @@ const RecentPost = () => {
                   <div className="mt-4">
                     <Link
                       to="/blog"
-                      onClick={() => {
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                      }}
+                      onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                      }
                     >
-                      <Button className="!rounded-full !min-w-0 !p-2 !border-gray-500 hover:!border-grey-800">
-                        <ChevronRight className="w-5 h-5 text-gray-700 hover:text-grey-600" />
+                      <Button className="!rounded-full !min-w-0 !p-2 !border-gray-500 hover:!border-gray-800">
+                        <ChevronRight className="w-5 h-5 text-gray-700 hover:text-gray-600" />
                       </Button>
                     </Link>
                   </div>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );
