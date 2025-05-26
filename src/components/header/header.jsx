@@ -130,9 +130,6 @@ const Header = () => {
                 }}
               >
                 {item.label}
-                {/* {isActive(item.path) && (
-                  <span className="ml-auto w-1 h-6 bg-gray-800 rounded-full"></span>
-                )} */}
               </Button>
             </Link>
           ))}
