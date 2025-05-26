@@ -1,5 +1,6 @@
 import { useState } from "react";
 import dayjs from "dayjs";
+import { useLocation } from "react-router-dom";
 import classes1 from "../../assets/images/classes-1.jpg";
 import classes2 from "../../assets/images/classes-2.jpg";
 import classes3 from "../../assets/images/classes-3.jpg";
@@ -201,7 +202,7 @@ const schedule = [
 
 const CalenderYoga = () => {
   const [currentMonth, setCurrentMonth] = useState(dayjs("2020-10-01"));
-
+  const { pathname } = useLocation();
   const handlePrevMonth = () => {
     setCurrentMonth((prev) => prev.subtract(1, "month"));
   };
@@ -246,16 +247,17 @@ const CalenderYoga = () => {
   return (
     <Box py={4} px={2}>
       <Container maxWidth="lg">
-        <Typography
-          variant="h5"
-          align="center"
-          mb={2}
-          gutterBottom
-          sx={{ fontWeight: "bold" }}
-        >
-          YOGA SCHEDULE
-        </Typography>
-
+        {pathname !== "/schedule" && (
+          <Typography
+            variant="h5"
+            align="center"
+            mb={2}
+            gutterBottom
+            sx={{ fontWeight: "bold" }}
+          >
+            YOGA SCHEDULE
+          </Typography>
+        )}
         <Box
           sx={{
             overflowX: "auto",
