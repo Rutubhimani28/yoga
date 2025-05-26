@@ -12,7 +12,7 @@ import recentFirst from "../assets/images/classes-3.jpg";
 import recentSecond from "../assets/images/classes-4.jpg";
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 py-12 px-4 sm:px-6 md:px-10 text-gray-800">
+    <footer className="bg-gray-50 py-12 px-4 sm:px-6 md:px-10 text-gray-800 mt-3">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
