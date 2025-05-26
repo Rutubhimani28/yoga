@@ -1,12 +1,8 @@
 import { Typography, Grid, Box } from "@mui/material";
-import { motion, useScroll, useTransform } from "framer-motion";
 import aboutScrollImg from "../../assets/images/about.jpg";
 
-const MotionBox = motion(Box);
 
 const YogaDetails = () => {
-  const { scrollYProgress } = useScroll();
-  const yPos = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   const stats = [
     { value: "150", label: "YOGA CLASSES" },
@@ -17,8 +13,7 @@ const YogaDetails = () => {
 
   return (
     <Box className="relative overflow-hidden h-[400px] md:h-[500px] flex items-center justify-center">
-      <MotionBox
-        style={{ y: yPos }}
+      <Box
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-fixed z-[-1]"
         sx={{
           backgroundImage: `url(${aboutScrollImg})`,
@@ -26,7 +21,7 @@ const YogaDetails = () => {
         }}
       >
         <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
-      </MotionBox>
+      </Box>
 
       <Grid
         container

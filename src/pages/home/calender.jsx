@@ -247,7 +247,6 @@ const CalenderYoga = () => {
   return (
     <Box py={6} px={2}>
       <Container maxWidth="lg">
-        {pathname !== "/schedule" && (
           <Typography
             variant="h5"
             align="center"
@@ -257,7 +256,6 @@ const CalenderYoga = () => {
           >
             YOGA SCHEDULE
           </Typography>
-        )}
         <Box
           className="overflow-x-auto border border-[#ccc] rounded-md"
         >
