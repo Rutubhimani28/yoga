@@ -11,23 +11,23 @@ const YogaSection = () => {
       alignItems="center"
       className="py-5"
     >
-      <Grid item size={{ xs: 12, md: 6 }} display="flex" justifyContent="center">
+      <Grid item xs={12} md={6} display="flex" justifyContent="center">
         <Box
           component="img"
           src={bg2}
           alt="Yoga Background"
-          className="w-full sm:w-[400px] md:w-[500px] h-[200px] sm:h-[300px] md:h-[350px] object-cover rounded-md shadow-md"
-
+          className="w-full max-w-[500px] h-[200px] sm:h-[300px] md:h-[350px] object-cover rounded-md shadow-md"
         />
       </Grid>
 
       <Grid
         item
-        size={{ xs: 12, md: 6 }}
+        xs={12}
+        md={6}
         display="flex"
         flexDirection="column"
         justifyContent="center"
-        px={2}
+        px={{ xs: 2, sm: 3, md: 4 }}
       >
         <Typography
           variant="h5"

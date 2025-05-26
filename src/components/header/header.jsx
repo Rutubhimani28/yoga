@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -59,7 +59,12 @@ const Header = () => {
               isScrolled ? "!text-gray-800" : "!text-white"
             }`}
           >
-            <img src={logo} height={100} width={100} className="filter grayscale brightness-[9] contrast-[.5]"/>
+            <img
+              src={logo}
+              height={100}
+              width={100}
+              className="filter grayscale brightness-[9] contrast-[.5]"
+            />
           </Typography>
 
           <ul className="hidden md:flex space-x-6">
@@ -95,7 +100,7 @@ const Header = () => {
           <div className="md:hidden">
             <IconButton
               onClick={toggleDrawer}
-              className={`${ isScrolled ? "text-black" : "text-white"} `}
+              className={`${isScrolled ? "!text-black" : "!text-white"} `}
             >
               <MenuIcon />
             </IconButton>
@@ -104,8 +109,13 @@ const Header = () => {
       </AppBar>
 
       <Drawer anchor="right" open={mobileOpen} onClose={toggleDrawer}>
-        <Box className="w-64 p-4 space-y-4 flex flex-col justify-center items-center"> 
-          <img src={logo} height={100} width={100} className="filter grayscale brightness-[9] contrast-[.5]"/>
+        <Box className="w-64 p-4 space-y-4 flex flex-col justify-center items-center">
+          <img
+            src={logo}
+            height={100}
+            width={100}
+            className="filter grayscale brightness-[9] contrast-[.5]"
+          />
           {navItems.map((item) => (
             <Link
               key={item.label}

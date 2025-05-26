@@ -37,14 +37,27 @@ const Slider = () => {
   return (
     <Box
       component="section"
-      className="relative w-full overflow-hidden xs:h-[70vh] md:h-[80vh]"
-
+      className="relative w-full overflow-hidden h-[70vh] md:h-[80vh]"
     >
       {slides.map((slide, index) => (
         <Box
           key={index}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out flex items-center justify-start ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'
-            }`}
+          // sx={{
+          //   position: "absolute",
+          //   top: 0,
+          //   left: 0,
+          //   width: "100%",
+          //   height: "100%",
+          //   transition: "opacity 1s ease",
+          //   opacity: index === current ? 1 : 0,
+          //   zIndex: index === current ? 10 : 0,
+          //   display: "flex",
+          //   alignItems: "center",
+          //   justifyContent: "flex-start",
+          // }}
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out flex items-center justify-start ${
+            index === current ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
           aria-hidden={index !== current}
         >
           <Box
@@ -53,17 +66,11 @@ const Slider = () => {
             alt={slide.title}
             draggable={false}
             className="w-full h-full object-cover select-none pointer-events-none z-[1] absolute top-0 left-0"
-
           />
 
-          <Box
-            className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.4)] z-10"
+          <Box className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.4)] z-10" />
 
-          />
-
-          <Box
-            className="relative z-10 max-w-[550px] ml-3 md:ml-10 text-white pl-3 sm:pl-6 md:pl-10"
-          >
+          <Box className="relative z-10 max-w-[550px] ml-3 md:ml-10 text-white pl-3 sm:pl-6 md:pl-10">
             <Typography
               variant="h3"
               component="h1"
@@ -82,16 +89,16 @@ const Slider = () => {
         </Box>
       ))}
 
-      <Box
-        className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-1.5 z-30"
-      >
+      <Box className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-1.5 z-30">
         {slides.map((_, index) => (
           <Box
             key={index}
             component="button"
             onClick={() => setCurrent(index)}
             aria-label={`Go to slide ${index + 1}`}
-            className={`w-3 h-3 rounded-full border-0 cursor-pointer transition-colors duration-300 p-0 ${index === current ? 'bg-[#4a4e43]' : 'bg-[rgba(255,255,255,0.5)]'}`}
+            className={`w-3 h-3 rounded-full border-0 cursor-pointer transition-colors duration-300 p-0 ${
+              index === current ? "bg-[#4a4e43]" : "bg-[rgba(255,255,255,0.5)]"
+            }`}
           />
         ))}
       </Box>
