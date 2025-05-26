@@ -1,13 +1,6 @@
-import {
-  Card,
-  CardContent,
-  Typography,
-  Button,
-  Box,
-  Grid,
-} from "@mui/material";
-import { CalendarDays, ChevronRight } from "lucide-react";
-import { useLocation, Link } from "react-router-dom";
+import { Card, CardContent, Typography, Box, Grid } from "@mui/material";
+import { CalendarDays } from "lucide-react";
+import { useLocation } from "react-router-dom";
 import postFirst from "../../assets/images/image_1.jpg";
 import postSecond from "../../assets/images/image_2.jpg";
 import postThird from "../../assets/images/image_3.jpg";
@@ -62,8 +55,6 @@ const posts1 = [
 
 const RecentPost = () => {
   const { pathname } = useLocation();
-  const displayPosts = pathname === "/blog" ? posts1 : posts;
-
   return (
     <Box className="py-16 mb-5 mt-5">
       <Box className="max-w-7xl mx-auto px-4 text-center">
@@ -75,8 +66,8 @@ const RecentPost = () => {
         )}
 
         <Grid container spacing={4} justifyContent="center">
-          {displayPosts.map((post) => (
-            <Grid size={{xs:12,md:6,lg:4}}  key={post.id}>
+          {posts.map((post) => (
+            <Grid size={{ xs: 12, md: 6, lg: 4 }} key={post.id}>
               <Card className="shadow-lg rounded-xl overflow-hidden h-full flex flex-col">
                 <img
                   src={post.image}
@@ -102,6 +93,38 @@ const RecentPost = () => {
               </Card>
             </Grid>
           ))}
+
+          {pathname == "/blog" &&
+            posts1.map((post) => (
+              <Grid size={{ xs: 12, md: 6, lg: 4 }} key={post.id}>
+                <Card className="shadow-lg rounded-xl overflow-hidden h-full flex flex-col">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-52 object-cover"
+                  />
+                  <CardContent className="text-left space-y-3 flex flex-col flex-grow">
+                    <Box className="flex items-center space-x-2">
+                      <span className="bg-gray-400 text-white text-xs px-2 py-1 rounded flex items-center">
+                        <CalendarDays className="w-4 h-4 mr-1" />
+                        {post.date}
+                      </span>
+                    </Box>
+
+                    <Typography
+                      variant="h6"
+                      className="font-bold text-gray-800"
+                    >
+                      {post.title}
+                    </Typography>
+
+                    <Typography variant="body2" className="text-gray-600">
+                      {post.desc}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
         </Grid>
       </Box>
     </Box>
