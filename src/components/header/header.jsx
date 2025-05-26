@@ -58,7 +58,7 @@ const Header = () => {
             Yogabest
           </Typography>
 
-          {/* Desktop Nav */}
+
           <ul className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <li key={item.label}>
@@ -78,7 +78,6 @@ const Header = () => {
             ))}
           </ul>
 
-          {/* Mobile Hamburger */}
           <div className="md:hidden">
             <IconButton
               onClick={toggleDrawer}
@@ -90,7 +89,7 @@ const Header = () => {
         </Toolbar>
       </AppBar>
 
-      {/* Mobile Drawer */}
+
       <Drawer anchor="right" open={mobileOpen} onClose={toggleDrawer}>
         <Box className="w-64 p-4 space-y-4">
           {navItems.map((item) => (
