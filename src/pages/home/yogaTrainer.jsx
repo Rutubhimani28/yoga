@@ -45,7 +45,7 @@ const YogaTrainer = () => {
         {pathname !== "/trainer" && (
           <Typography
             variant="h2"
-            className="!text-3xl md:text-3xl font-bold text-gray-800 text-center !mb-4"
+            className="!text-3xl md:text-3xl font-bold text-gray-800 text-center !mb-6"
           >
             THE BEST TRAINER FOR YOU
           </Typography>
