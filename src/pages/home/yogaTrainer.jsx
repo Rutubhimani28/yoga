@@ -3,51 +3,60 @@ import trainer1 from "../../assets/images/trainer-1.jpg";
 import trainer2 from "../../assets/images/trainer-2.jpg";
 import trainer3 from "../../assets/images/trainer-3.jpg";
 import trainer4 from "../../assets/images/trainer-4.jpg";
+import { useLocation } from "react-router-dom";
 
 const trainers = [
   {
     name: "Elizabeth Nelson",
-    role: "BROWN / HUAS GOLDEN",
+    role: "OWNER / HEAD COACH",
     image: trainer1,
+    description:
+      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
   {
     name: "Scarlett Torres",
-    role: "SPIRIT / HUAS GOLDEN",
+    role: "OWNER / HEAD COACH",
     image: trainer2,
+    description:
+      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
   {
     name: "Victoria Wright",
-    role: "SPIRIT / HUAS GOLDEN",
+    role: "OWNER / HEAD COACH",
     image: trainer3,
+    description:
+      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
   {
-    name: "Stello Perry",
-    role: "SPIRIT / HUAS GOLDEN",
+    name: "Stella Perry",
+    role: "OWNER / HEAD COACH",
     image: trainer4,
+    description:
+      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
 ];
 
 const YogaTrainer = () => {
+  const { pathname } = useLocation();
   return (
     <Box className="bg-gray-50 py-10 px-4">
       <Box className="max-w-6xl mx-auto">
-        {/* Section Heading */}
-        <Typography
-          variant="h2"
-          className="!text-3xl md:text-3xl font-bold text-gray-800 text-center !mb-4"
-        >
-          THE BEST TRAINER FOR YOU
-        </Typography>
+        {pathname !== "/trainer" && (
+          <Typography
+            variant="h2"
+            className="!text-3xl md:text-3xl font-bold text-gray-800 text-center !mb-4"
+          >
+            THE BEST TRAINER FOR YOU
+          </Typography>
+        )}
 
-        {/* Trainers Grid */}
         <Box className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {trainers.map((trainer, index) => (
             <Box
               key={index}
               className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center group"
             >
-              {/* Image Container */}
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-gray-300 transition-colors group">
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-gray-300 transition-colors">
                 <img
                   src={trainer.image}
                   alt={trainer.name}
@@ -60,17 +69,28 @@ const YogaTrainer = () => {
                   }}
                 />
               </div>
+
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Typography
+                  variant="body2"
+                  className="text-gray-500 uppercase text-sm tracking-wider"
+                >
+                  {trainer.role}
+                </Typography>
+              </div>
+
               <Typography
                 variant="h5"
-                className="text-lg font-semibold text-gray-800 mb-1"
+                className="text-lg font-semibold text-gray-800 mb-3"
               >
                 {trainer.name}
               </Typography>
+
               <Typography
-                variant="body2"
-                className="text-gray-500 uppercase text-sm tracking-wider"
+                variant="body1"
+                className="text-gray-600 text-sm leading-relaxed"
               >
-                {trainer.role}
+                {trainer.description}
               </Typography>
             </Box>
           ))}

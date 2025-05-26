@@ -1,7 +1,7 @@
 import { Breadcrumbs, Link, Typography, Container } from "@mui/material";
 import classImage from "../../assets/images/classes-7.jpg";
 
-const ClassesHero = () => {
+const ScheduleHero = () => {
   return (
     <div
       className="w-full h-[70vh] md:h-[90vh] bg-cover bg-center flex items-center main-banner"
@@ -19,7 +19,7 @@ const ClassesHero = () => {
           <Link underline="hover" color="inherit" href="/">
             Home
           </Link>
-          <Typography color="white">Classes</Typography>
+          <Typography color="white">Schedule</Typography>
         </Breadcrumbs>
 
         <Typography
@@ -27,11 +27,11 @@ const ClassesHero = () => {
           className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide leading-snug"
           sx={{ color: "white" }}
         >
-          Best Classes
+          Best Schedule
         </Typography>
       </Container>
     </div>
   );
 };
 
-export default ClassesHero;
+export default ScheduleHero;
