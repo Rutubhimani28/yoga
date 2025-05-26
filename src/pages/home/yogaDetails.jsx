@@ -30,7 +30,6 @@ const YogaDetails = () => {
       >
         {stats.map((stat, index) => (
           <Grid
-            item
             size={{ xs: 6, md: 3 }}
             key={index}
             className="text-center"
@@ -41,7 +40,7 @@ const YogaDetails = () => {
               <Typography
                 variant="h3"
                 component="div"
-                class="font-bold text-white mb-1 md:text-[3rem]"
+                className="font-bold text-white mb-1 md:text-[3rem]"
               >
                 {stat.value}
               </Typography>
