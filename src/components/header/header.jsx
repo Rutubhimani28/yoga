@@ -117,23 +117,22 @@ const Header = () => {
             >
               <Button
                 fullWidth
-                className={`justify-start text-left normal-case ${
+                className={`justify-start text-left normal-case  ${
                   isActive(item.path)
-                    ? "!text-gray-800 !bg-gray-100 font-medium"
+                    ? "!text-gray-800 font-medium !border-b-4 !border-gray-500"
                     : "!text-gray-600 hover:!bg-gray-100"
                 }`}
                 sx={{
                   justifyContent: "flex-start",
                   textTransform: "none",
-                  borderRadius: "4px",
                   padding: "8px 16px",
                   marginBottom: "4px",
                 }}
               >
                 {item.label}
-                {isActive(item.path) && (
+                {/* {isActive(item.path) && (
                   <span className="ml-auto w-1 h-6 bg-gray-800 rounded-full"></span>
-                )}
+                )} */}
               </Button>
             </Link>
           ))}
