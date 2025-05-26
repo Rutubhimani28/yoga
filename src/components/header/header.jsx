@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
-
+import logo from "../../assets/images/logo2.png";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
@@ -55,7 +55,7 @@ const Header = () => {
               isScrolled ? "!text-black" : "!text-white"
             }`}
           >
-            Yogabest
+            <img src={logo} height={100} width={100} className="filter grayscale brightness-[9] contrast-[.5]"/>
           </Typography>
 
 
@@ -91,7 +91,9 @@ const Header = () => {
 
 
       <Drawer anchor="right" open={mobileOpen} onClose={toggleDrawer}>
-        <Box className="w-64 p-4 space-y-4">
+
+        <Box className="w-64 p-4 space-y-4 flex flex-col justify-center items-center"> 
+      <img src={logo} height={100} width={100} className="filter grayscale brightness-[9] contrast-[.5]"/>
           {navItems.map((item) => (
             <Link
               key={item.label}
