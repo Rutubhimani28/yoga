@@ -59,7 +59,9 @@ const Header = () => {
               isScrolled ? "!text-gray-800" : "!text-white"
             }`}
           >
-            <img src={logo} height={100} width={100} className="filter grayscale brightness-[9] contrast-[.5]"/>
+            <img src={logo} height={100} width={100}   className={`transition-all duration-300 ${isScrolled ? "filter grayscale brightness-[1] contrast-[.5]" : "filter grayscale brightness-[10] contrast-[.5]"}`}
+
+            />
           </Typography>
 
           <ul className="hidden md:flex space-x-6">
