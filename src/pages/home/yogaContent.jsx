@@ -10,11 +10,7 @@ const YogaContent = () => {
       alignItems="center"
       className="py-4 bg-center bg-cover bg-white/20 bg-blend-overlay opacity-95 yogacontent-background"
     >
-      <Grid
-        item
-        size={{ xs: 12, md: 6 }}
-        className="flex justify-center w-full mb-6 md:mb-0"
-      >
+      <Grid size={{ xs: 12, md: 6 }} display="flex" justifyContent="center">
         <Box
           component="img"
           src={aboutImg}
@@ -23,9 +19,13 @@ const YogaContent = () => {
         />
       </Grid>
 
-      <Grid item size={{ xs: 12, md: 6 }}>
-        <Box className="text-left max-w-[600px] mx-auto p-3">
-          <Box className="mb-4 bg-white/85 shadow-md rounded-md p-3">
+      <Grid size={{ xs: 12, md: 6 }}>
+        <Box
+          className="text-left max-w-[600px] mx-auto p-3"
+        >
+          <Box
+            className="mb-4 bg-white/85 shadow-md rounded-md p-3"
+          >
             <Typography
               variant="h5"
               component="h2"

@@ -9,19 +9,19 @@ const YogaCards = () => {
       title: "Outdoor Activities",
       description:
         "Reconnect with nature through our outdoor yoga sessions, where you can harmonize your breath with the gentle breeze and embrace the healing energy of the sun.",
-      icon: <WbSunnyIcon color="warning" sx={{ fontSize: 40 }} />,
+      icon: <WbSunnyIcon color="warning" className="font-[40px]" />,
     },
     {
       title: "Experienced Trainers",
       description:
         "Practice safely and mindfully with guidance from our certified yoga instructors, dedicated to nurturing your body, mind, and spirit at every step.",
-      icon: <PeopleIcon color="primary" sx={{ fontSize: 40 }} />,
+      icon: <PeopleIcon color="primary" className="font-[40px]" />,
     },
     {
       title: "Happy Environment",
       description:
         "Join a supportive and uplifting community where positivity flows freely, fostering inner peace and joyful transformation through yoga.",
-      icon: <EmojiEmotionsIcon color="secondary" sx={{ fontSize: 40 }} />,
+      icon: <EmojiEmotionsIcon color="secondary" className="font-[40px]" />,
     },
   ];
   return (
@@ -35,16 +35,17 @@ const YogaCards = () => {
       className="py-10 bg-[#f7f7f7]"
     >
       {yogaFeatures.map((feature, index) => (
-        <Grid
-          item
-          size={{ xs: 12, sm: 6, md: 6 }}
-          key={index}
-          display="flex"
-          className="p-3 md:!p-6"
-        >
-          <Card className="w-full rounded-md shadow-sm flex-grow transition-all duration-300 ease-in-out hover:shadow-md hover:scale-[1.02]">
-            <CardContent className="text-center p-4 flex flex-col h-full justify-center">
-              <Box className="w-20 h-20 rounded-full mx-auto flex items-center justify-center mb-3 bg-[linear-gradient(135deg,_#f3e5f5_0%,_#fce4ec_100%)]">
+        <Grid size={{ xs: 12, sm: 6, md: 6 }} key={index} className="flex justify-center">
+          <Card
+            className="max-w-[400px] rounded-md shadow-sm flex-grow transition-all duration-300 ease-in-out hover:shadow-md hover:scale-[1.02] mx-4"
+
+          >
+            <CardContent
+              className="text-center p-4 flex flex-col h-full justify-center"
+            >
+              <Box
+                className="w-20 h-20 rounded-full mx-auto flex items-center justify-center mb-3 bg-[linear-gradient(135deg,_#f3e5f5_0%,_#fce4ec_100%)]"
+              >
                 {feature.icon}
               </Box>
               <Typography

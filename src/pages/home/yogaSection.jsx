@@ -11,7 +11,7 @@ const YogaSection = () => {
       alignItems="center"
       className="py-5"
     >
-      <Grid item xs={12} md={6} display="flex" justifyContent="center">
+      <Grid size={{ xs: 12, md: 6 }} display="flex" justifyContent="center">
         <Box
           component="img"
           src={bg2}
@@ -21,9 +21,7 @@ const YogaSection = () => {
       </Grid>
 
       <Grid
-        item
-        xs={12}
-        md={6}
+        size={{ xs: 12, md: 6 }}
         display="flex"
         flexDirection="column"
         justifyContent="center"

@@ -253,30 +253,22 @@ const CalenderYoga = () => {
             align="center"
             mb={2}
             gutterBottom
-            sx={{ fontWeight: "bold" }}
+            className="!font-bold"
           >
             YOGA SCHEDULE
           </Typography>
         )}
         <Box
-          sx={{
-            overflowX: "auto",
-            border: "1px solid #ccc",
-            borderRadius: 2,
-          }}
+          className="overflow-x-auto border border-[#ccc] rounded-md"
         >
-          <Table sx={{ minWidth: 700 }}>
+          <Table className="min-w-[700px]">
             <TableHead>
               <TableRow>
                 {days.map((day) => (
                   <TableCell
                     key={day}
                     align="center"
-                    sx={{
-                      fontWeight: "bold",
-                      fontSize: "1rem",
-                      border: "1px solid #ccc",
-                    }}
+                    className="!font-bold text-base border border-[#ccc]"
                   >
                     {day}
                   </TableCell>
@@ -289,11 +281,8 @@ const CalenderYoga = () => {
                   {days.map((day) => (
                     <TableCell
                       key={day}
-                      sx={{
-                        padding: 0,
-                        height: 100,
-                        border: "1px solid #ccc",
-                      }}
+                      className="!p-0 border border-[#ccc] calender-cell"
+                    // style="height: 100px;" 
                     >
                       {renderCellContent(day, week)}
                     </TableCell>
