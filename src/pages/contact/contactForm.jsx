@@ -57,7 +57,7 @@ const ContactForm = () => {
           </Box>
 
           <Box className="mt-6">
-            <Button className="!bg-gray-500 hover:!bg-gray-600 !text-white px-6 py-2 rounded shadow">
+            <Button className=" bg-gradient-to-r from-gray-600 to-gray-800 !text-white py-3 px-4 rounded-lg font-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lgpx-6 py-2 rounded shadow">
               Send Message
             </Button>
           </Box>

@@ -37,7 +37,7 @@ const YogaCards = () => {
       className="py-10 bg-[#f7f7f7]"
     >
       {yogaFeatures.map((feature, index) => (
-        <Grid size={{ xs: 12, sm: 6, md: 6 }} key={index} className="flex justify-center">
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 3 }} key={index} className="flex justify-center">
           <Card
             className="max-w-[400px] rounded-md shadow-sm flex-grow transition-all duration-300 ease-in-out hover:shadow-md hover:scale-[1.02] mx-4"
 
