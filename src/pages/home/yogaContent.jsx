@@ -43,9 +43,9 @@ const YogaContent = () => {
               paragraph
               className="text-[#999999] !font-[1.1rem]"
             >
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia. It is a paradisematic country, in
-              which roasted parts of sentences fly into your mouth.
+              Yoga is the journey of the self, through the self, to the self. It
+              brings harmony between body and mind, helping you find inner peace
+              and physical strength in every breath and movement.
             </Typography>
           </Box>
           <Box
@@ -66,9 +66,10 @@ const YogaContent = () => {
               paragraph
               className="text-[#999999]  !font-[1.1rem]"
             >
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia. It is a paradisematic country, in
-              which roasted parts of sentences fly into your mouth.
+              A healthy daily life begins with mindful choices — balanced meals,
+              regular exercise, quality sleep, and moments of relaxation. These
+              habits nourish both body and mind, leading to lasting energy and
+              well-being.
             </Typography>
           </Box>
 
@@ -90,9 +91,10 @@ const YogaContent = () => {
               paragraph
               className="text-[#999999]  !font-[1.1rem]"
             >
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia. It is a paradisematic country, in
-              which roasted parts of sentences fly into your mouth.
+              Regular stretching and yoga practices help lengthen muscles,
+              release tension, and increase your range of motion. Improved
+              flexibility not only enhances posture but also reduces the risk of
+              injury in everyday activities.
             </Typography>
           </Box>
         </Box>

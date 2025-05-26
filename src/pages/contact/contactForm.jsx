@@ -3,7 +3,7 @@ import contactImage from "../../assets/images/classes-1.jpg";
 const ContactForm = () => {
   return (
     <Container maxWidth="lg" display="flex" justifyContent="space-between">
-      <Box className="flex flex-col lg:flex-row w-full  items-center justify-center bg-white p-4">
+      <Box className="flex flex-col lg:flex-row w-full gap-x-10 items-center justify-center bg-white p-4">
         <Box className="w-full lg:w-1/2 mt-10 lg:mt-0 lg:pl-10 flex justify-center">
           <img
             src={contactImage}
