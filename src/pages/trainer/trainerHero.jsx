@@ -3,7 +3,7 @@ import classImage from "../../assets/images/classes-7.jpg";
 const TrainerHero = () => {
   return (
     <div
-      className="w-full h-[70vh] md:h-[90vh] bg-cover bg-center flex items-center main-banner"
+      className="w-full h-[70vh] md:h-[90vh] bg-cover bg-center flex items-center main-banner relative"
       style={{
         backgroundImage: `url(${classImage})`,
       }}
