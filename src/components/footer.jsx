@@ -12,6 +12,7 @@ import { Box, Typography, Grid, IconButton, Divider } from "@mui/material";
 import recentFirst from "../assets/images/classes-3.jpg";
 import recentSecond from "../assets/images/classes-4.jpg";
 import logo from "../assets/images/logo2.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const menuItems = [
