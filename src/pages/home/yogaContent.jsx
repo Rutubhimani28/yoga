@@ -8,17 +8,14 @@ const YogaContent = () => {
       spacing={4}
       justifyContent="center"
       alignItems="center"
-      height={"85vh"}
-
       className="py-4 bg-center bg-cover bg-white/20 bg-blend-overlay opacity-95 yogacontent-background"
-
     >
       <Grid size={{ xs: 12, md: 6 }} display="flex" justifyContent="center">
         <Box
           component="img"
           src={aboutImg}
           alt="Yoga Practice"
-          className="w-full sm:w-[90%] md:w-full max-w-[500px] h-auto"
+          className="w-full  md:w-full max-w-[500px] h-auto"
         />
       </Grid>
 
@@ -48,10 +45,7 @@ const YogaContent = () => {
               and physical strength in every breath and movement.
             </Typography>
           </Box>
-          <Box
-            className="mb-4 bg-white/85 shadow-md rounded-md p-3"
-
-          >
+          <Box className="mb-4 bg-white/85 shadow-md rounded-md p-3">
             <Typography
               variant="h5"
               component="h2"
@@ -73,10 +67,7 @@ const YogaContent = () => {
             </Typography>
           </Box>
 
-          <Box
-            className="mb-4 bg-white/85 shadow-md rounded-md p-3"
-
-          >
+          <Box className="mb-4 bg-white/85 shadow-md rounded-md p-3">
             <Typography
               variant="h5"
               component="h2"
