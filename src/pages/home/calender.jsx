@@ -296,14 +296,14 @@ const CalenderYoga = () => {
         <Box display="flex" justifyContent="space-between" mt={3}>
           <Button
             onClick={handlePrevMonth}
-            className=" !bg-gradient-to-r from-gray-600 to-gray-800 !text-white font-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded mr-2"
+            className=" !bg-gradient-to-r from-gray-600 to-gray-800 !text-white !sm:text-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded mr-2 !text-[10px]"
           >
             ← {currentMonth.subtract(1, "month").format("MMMM YYYY")}
           </Button>
 
           <Button
             onClick={handleNextMonth}
-            className="!bg-gradient-to-r from-gray-600 to-gray-800 !text-white  font-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded"
+            className="!bg-gradient-to-r from-gray-600 to-gray-800 !text-white !sm:text-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded !text-[10px]"
           >
             {currentMonth.add(1, "month").format("MMMM YYYY")} →
           </Button>
