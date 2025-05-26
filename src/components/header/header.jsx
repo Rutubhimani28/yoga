@@ -70,10 +70,10 @@ const Header = () => {
                     disableRipple
                     className={`capitalize font-medium bg-transparent shadow-none transition-colors duration-200 relative ${isScrolled
                       ? isActive(item.path)
-                        ? "!text-gray-800 font-semibold"
+                        ? "!text-gray-800 !font-bold"
                         : "!text-gray-600 hover:!text-gray-800"
                       : isActive(item.path)
-                        ? "!text-white font-semibold"
+                        ? "!text-white !font-bold"
                         : "!text-gray-200 hover:!text-white"
                       }`}
                   >

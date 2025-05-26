@@ -8,30 +8,38 @@ import {
   Book,
   Chat,
 } from "@mui/icons-material";
-import {
-  Box,
-  Typography,
-  Grid,
-  IconButton,
-  Divider,
-} from "@mui/material";
+import { Box, Typography, Grid, IconButton, Divider } from "@mui/material";
 import recentFirst from "../assets/images/classes-3.jpg";
 import recentSecond from "../assets/images/classes-4.jpg";
+import { Link } from "react-router-dom";
 const Footer = () => {
   const menuItems = [
-    { name: "About", icon: <Home fontSize="small" /> },
-    { name: "Contact", icon: <Mail fontSize="small" /> },
-    { name: "Classes", icon: <Book fontSize="small" /> },
-    { name: "Schedule", icon: <CalendarToday fontSize="small" /> },
-    { name: "Blog", icon: <Chat fontSize="small" /> },
+    { name: "About", icon: <Home fontSize="small" />, href: "/about" },
+    { name: "Contact", icon: <Mail fontSize="small" />, href: "/contact" },
+    { name: "Classes", icon: <Book fontSize="small" />, href: "/classes" },
+    {
+      name: "Schedule",
+      icon: <CalendarToday fontSize="small" />,
+      href: "/schedule",
+    },
+    { name: "Blog", icon: <Chat fontSize="small" />, href: "/blog" },
   ];
 
   return (
-    <Box component="footer" sx={{ bgcolor: "#f9fafb", color: "#1f2937", py: 12, px: { xs: 4, sm: 6, md: 10 }, mt: 3 }}>
+    <Box
+      component="footer"
+      sx={{
+        bgcolor: "#f9fafb",
+        color: "#1f2937",
+        py: 12,
+        px: { xs: 4, sm: 6, md: 10 },
+        mt: 3,
+      }}
+    >
       <Box sx={{ maxWidth: "1280px", mx: "auto" }}>
         <Grid container spacing={6}>
           <Grid container spacing={4}>
-            <Grid size={{ xs: 12, sm: 6, lg: 3 }} >
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
               <Typography variant="h6" fontWeight="bold" gutterBottom>
                 Yogabest
               </Typography>
@@ -40,19 +48,25 @@ const Footer = () => {
                 that nurture your body, mind, and soul.
               </Typography>
               <Box sx={{ display: "flex", gap: 2, mt: 2 }}>
-                <IconButton sx={{ color: "gray", "&:hover": { color: "#1877f2" } }}>
+                <IconButton
+                  sx={{ color: "gray", "&:hover": { color: "#1877f2" } }}
+                >
                   <Facebook />
                 </IconButton>
-                <IconButton sx={{ color: "gray", "&:hover": { color: "#1DA1F2" } }}>
+                <IconButton
+                  sx={{ color: "gray", "&:hover": { color: "#1DA1F2" } }}
+                >
                   <Twitter />
                 </IconButton>
-                <IconButton sx={{ color: "gray", "&:hover": { color: "#E1306C" } }}>
+                <IconButton
+                  sx={{ color: "gray", "&:hover": { color: "#E1306C" } }}
+                >
                   <Instagram />
                 </IconButton>
               </Box>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6, lg: 3 }} >
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
               <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
                 Explore
               </Typography>
@@ -64,60 +78,67 @@ const Footer = () => {
                     sx={{ display: "flex", alignItems: "center", mb: 1 }}
                   >
                     <Box sx={{ mr: 1, color: "gray" }}>{item.icon}</Box>
-                    <Typography
-                      component="a"
-                      href="#"
-                      variant="body2"
-                      sx={{
-                        color: "inherit",
-                        textDecoration: "none",
-                        "&:hover": { color: "#2563eb" },
-                        transition: "color 0.3s",
-                      }}
+                    <Link
+                      to={item.href}
                     >
-                      {item.name}
-                    </Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: "inherit",
+                          textDecoration: "none",
+                          "&:hover": { color: "#2563eb" },
+                          transition: "color 0.3s",
+                        }}
+                      >
+                        {item.name}
+                      </Typography>
+                    </Link>
                   </Box>
                 ))}
               </Box>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6, lg: 3 }} >
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
               <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
                 Recent Blog
               </Typography>
-              {[{ img: recentFirst, date: "June 15, 2023" }, { img: recentSecond, date: "May 28, 2023" }].map(
-                (blog, idx) => (
-                  <Box key={idx} sx={{ display: "flex", gap: 2, mb: 2 }}>
-                    <Box
-                      sx={{
-                        width: 64,
-                        height: 64,
-                        borderRadius: 1,
-                        overflow: "hidden",
-                        bgcolor: "grey.200",
+              {[
+                { img: recentFirst, date: "June 15, 2023" },
+                { img: recentSecond, date: "May 28, 2023" },
+              ].map((blog, idx) => (
+                <Box key={idx} sx={{ display: "flex", gap: 2, mb: 2 }}>
+                  <Box
+                    sx={{
+                      width: 64,
+                      height: 64,
+                      borderRadius: 1,
+                      overflow: "hidden",
+                      bgcolor: "grey.200",
+                    }}
+                  >
+                    <img
+                      src={blog.img}
+                      alt="Yoga practice"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
                       }}
-                    >
-                      <img
-                        src={blog.img}
-                        alt="Yoga practice"
-                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                      />
-                    </Box>
-                    <Box>
-                      <Typography variant="body2" gutterBottom>
-                        Yoga practices to boost happiness
-                      </Typography>
-                      <Typography variant="caption" color="text.secondary">
-                        {blog.date}
-                      </Typography>
-                    </Box>
+                    />
                   </Box>
-                )
-              )}
+                  <Box>
+                    <Typography variant="body2" gutterBottom>
+                      Yoga practices to boost happiness
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      {blog.date}
+                    </Typography>
+                  </Box>
+                </Box>
+              ))}
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6, lg: 3 }} >
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
               <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
                 Have a Question?
               </Typography>
@@ -131,7 +152,7 @@ const Footer = () => {
                 <Typography variant="body2">info@yourdomain.com</Typography>
               </address>
             </Grid>
-          </Grid> 
+          </Grid>
         </Grid>
 
         <Divider sx={{ my: 8 }} />
