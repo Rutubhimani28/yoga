@@ -9,61 +9,39 @@ const YogaContent = () => {
       justifyContent="center"
       alignItems="center"
       height={"85vh"}
-      sx={{
-        py: 4,
-        backgroundImage: `url(${bacImage})`,
-        backgroundPosition: "center center",
-        backgroundSize: "cover",
-        opacity: "0.95",
-        backgroundColor: "rgba(255,255,255,0.2)",
-        backgroundBlendMode: "overlay",
-      }}
+
+      className="py-4 bg-center bg-cover bg-white/20 bg-blend-overlay opacity-95 yogacontent-background"
+
     >
-      <Grid item xs={12} md={6} display="flex" justifyContent="center">
+      <Grid item size={{ xs: 12, md: 6 }} display="flex" justifyContent="center">
         <Box
           component="img"
           src={aboutImg}
           alt="Yoga Practice"
-          sx={{
-            width: { xs: "100%", sm: "90%", md: "100%" },
-            maxWidth: 500,
-            height: "auto",
-          }}
+          className="w-full sm:w-[90%] md:w-full max-w-[500px] h-auto"
         />
       </Grid>
 
-      <Grid item xs={12} md={6}>
+      <Grid item size={{ xs: 12, md: 6 }}>
         <Box
-          sx={{
-            textAlign: "left",
-            maxWidth: 600,
-            mx: "auto",
-            p: 3,
-          }}
+          className="text-left max-w-[600px] mx-auto p-3"
         >
           <Box
-            sx={{
-              mb: 4,
-              backgroundColor: "rgba(255,255,255,0.85)",
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              borderRadius: 2,
-              p: 3,
-            }}
+            className="mb-4 bg-white/85 shadow-md rounded-md p-3"
           >
             <Typography
               variant="h5"
               component="h2"
               gutterBottom
               textTransform="uppercase"
-              sx={{ fontWeight: "bold" }}
+              className="!font-bold"
             >
               Body & Mind Balance
             </Typography>
             <Typography
               variant="body1"
               paragraph
-              sx={{ fontSize: "1.1rem" }}
-              className="text-[#999999]"
+              className="text-[#999999] !font-[1.1rem]"
             >
               Yoga is the journey of the self, through the self, to the self. It
               brings harmony between body and mind, helping you find inner peace
@@ -71,28 +49,22 @@ const YogaContent = () => {
             </Typography>
           </Box>
           <Box
-            sx={{
-              mb: 4,
-              backgroundColor: "rgba(255,255,255,0.85)",
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              borderRadius: 2,
-              p: 3,
-            }}
+            className="mb-4 bg-white/85 shadow-md rounded-md p-3"
+
           >
             <Typography
               variant="h5"
               component="h2"
               gutterBottom
               textTransform="uppercase"
-              sx={{ fontWeight: "bold" }}
+              className="!font-bold"
             >
               Healthy Daily Life
             </Typography>
             <Typography
               variant="body1"
               paragraph
-              sx={{ fontSize: "1.1rem" }}
-              className="text-[#999999]"
+              className="text-[#999999]  !font-[1.1rem]"
             >
               A healthy daily life begins with mindful choices — balanced meals,
               regular exercise, quality sleep, and moments of relaxation. These
@@ -102,27 +74,22 @@ const YogaContent = () => {
           </Box>
 
           <Box
-            sx={{
-              backgroundColor: "rgba(255,255,255,0.85)",
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              borderRadius: 2,
-              p: 3,
-            }}
+            className="mb-4 bg-white/85 shadow-md rounded-md p-3"
+
           >
             <Typography
               variant="h5"
               component="h2"
               gutterBottom
               textTransform="uppercase"
-              sx={{ fontWeight: "bold" }}
+              className="!font-bold"
             >
               Improves your flexibility
             </Typography>
             <Typography
               variant="body1"
               paragraph
-              sx={{ fontSize: "1.1rem" }}
-              className="text-[#999999]"
+              className="text-[#999999]  !font-[1.1rem]"
             >
               Regular stretching and yoga practices help lengthen muscles,
               release tension, and increase your range of motion. Improved

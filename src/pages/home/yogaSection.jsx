@@ -11,33 +11,19 @@ const YogaSection = () => {
       alignItems="center"
       className="py-5"
     >
-      <Grid item xs={12} md={6} display="flex" justifyContent="center">
+      <Grid item size={{ xs: 12, md: 6 }} display="flex" justifyContent="center">
         <Box
           component="img"
           src={bg2}
           alt="Yoga Background"
-          sx={{
-            width: {
-              xs: "100%",
-              sm: 400,
-              md: 500,
-            },
-            height: {
-              xs: 200,
-              sm: 300,
-              md: 350,
-            },
-            objectFit: "cover",
-            borderRadius: 2,
-            boxShadow: 3,
-          }}
+          className="w-full sm:w-[400px] md:w-[500px] h-[200px] sm:h-[300px] md:h-[350px] object-cover rounded-md shadow-md"
+
         />
       </Grid>
 
       <Grid
         item
-        xs={12}
-        md={6}
+        size={{ xs: 12, md: 6 }}
         display="flex"
         flexDirection="column"
         justifyContent="center"
@@ -66,11 +52,7 @@ const YogaSection = () => {
           variant="body1"
           color="text.secondary"
           align="center"
-          sx={{
-            whiteSpace: "pre-line",
-            maxWidth: "80ch",
-            mx: "auto",
-          }}
+          className="whitespace-pre-line max-w-[80ch] mx-auto"
           textAlign={"left"}
         >
           Discover peace and strength through mindful yoga practice. Our classes

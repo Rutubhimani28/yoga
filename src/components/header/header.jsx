@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/images/logo2.png";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -58,7 +59,7 @@ const Header = () => {
               isScrolled ? "!text-gray-800" : "!text-white"
             }`}
           >
-            Yogabest
+            <img src={logo} height={100} width={100} className="filter grayscale brightness-[9] contrast-[.5]"/>
           </Typography>
 
           <ul className="hidden md:flex space-x-6">
@@ -94,7 +95,7 @@ const Header = () => {
           <div className="md:hidden">
             <IconButton
               onClick={toggleDrawer}
-              className={isScrolled ? "text-gray-800" : "text-white"}
+              className={`${ isScrolled ? "text-black" : "text-white"} `}
             >
               <MenuIcon />
             </IconButton>
@@ -103,8 +104,8 @@ const Header = () => {
       </AppBar>
 
       <Drawer anchor="right" open={mobileOpen} onClose={toggleDrawer}>
-        <Box className="w-64 p-4 space-y-2 bg-gray-50 h-full">
-          {navItems.map((item) => (
+        <Box className="w-64 p-4 space-y-4 flex flex-col justify-center items-center"> 
+          <img src={logo} height={100} width={100} className="filter grayscale brightness-[9] contrast-[.5]"/>
             <Link
               key={item.label}
               to={item.path}
