@@ -1,9 +1,9 @@
-import { Breadcrumbs, Link, Typography, Container } from "@mui/material";
+import { Breadcrumbs, Link, Typography, Container, Box } from "@mui/material";
 import classImage from "../../assets/images/classes-7.jpg";
 
 const ClassesHero = () => {
   return (
-    <div
+    <Box
       className="w-full h-[70vh] md:h-[90vh] bg-cover bg-center flex items-center main-banner relative"
       style={{
         backgroundImage: `url(${classImage})`,
@@ -28,7 +28,7 @@ const ClassesHero = () => {
           Best Classes
         </Typography>
       </Container>
-    </div>
+    </Box>
   );
 };
 

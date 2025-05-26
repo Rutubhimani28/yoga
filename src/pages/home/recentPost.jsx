@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography, Button } from "@mui/material";
+import { Card, CardContent, Typography, Button, Box } from "@mui/material";
 import { CalendarDays, ChevronRight } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -56,8 +56,8 @@ const posts1 = [
 const RecentPost = () => {
   const { pathname } = useLocation();
   return (
-    <div className="py-16 bg-gray-50 mb-5 mt-5">
-      <div className="max-w-7xl mx-auto px-4 text-center">
+    <Box className="py-16 bg-gray-50 mb-5 mt-5">
+      <Box className="max-w-7xl mx-auto px-4 text-center">
         {pathname !== "/blog" && (
           <>
             <p className="text-grey-500 font-medium mb-2">Our Blog</p>
@@ -65,7 +65,7 @@ const RecentPost = () => {
           </>
         )}
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-6">
+        <Box className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-6">
           {posts.map((post) => (
             <Card
               key={post.id}
@@ -77,11 +77,11 @@ const RecentPost = () => {
                 className="w-full h-52 object-cover"
               />
               <CardContent className="text-left space-y-3">
-                <div className="flex items-center space-x-2">
+                <Box className="flex items-center space-x-2">
                   <span className="bg-gray-400 text-white text-xs px-2 py-1 rounded flex items-center">
                     <CalendarDays className="w-4 h-4 mr-1" /> {post.date}
                   </span>
-                </div>
+                </Box>
                 <Typography variant="h6" className="font-bold text-gray-800">
                   {post.title}
                 </Typography>
@@ -89,7 +89,7 @@ const RecentPost = () => {
                   {post.desc}
                 </Typography>
 
-                <div className="mt-4">
+                <Box className="mt-4">
                   <Link
                     to={pathname}
                     onClick={() =>
@@ -100,7 +100,7 @@ const RecentPost = () => {
                       <ChevronRight className="w-5 h-5 text-gray-700 hover:text-gray-600" />
                     </Button>
                   </Link>
-                </div>
+                </Box>
               </CardContent>
             </Card>
           ))}
@@ -117,11 +117,11 @@ const RecentPost = () => {
                   className="w-full h-52 object-cover"
                 />
                 <CardContent className="text-left space-y-3">
-                  <div className="flex items-center space-x-2">
+                  <Box className="flex items-center space-x-2">
                     <span className="bg-gray-400 text-white text-xs px-2 py-1 rounded flex items-center">
                       <CalendarDays className="w-4 h-4 mr-1" /> {post.date}
                     </span>
-                  </div>
+                  </Box>
                   <Typography variant="h6" className="font-bold text-gray-800">
                     {post.title}
                   </Typography>
@@ -129,7 +129,7 @@ const RecentPost = () => {
                     {post.desc}
                   </Typography>
 
-                  <div className="mt-4">
+                  <Box className="mt-4">
                     <Link
                       to="/blog"
                       onClick={() =>
@@ -140,13 +140,13 @@ const RecentPost = () => {
                         <ChevronRight className="w-5 h-5 text-gray-700 hover:text-gray-600" />
                       </Button>
                     </Link>
-                  </div>
+                  </Box>
                 </CardContent>
               </Card>
             ))}
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
