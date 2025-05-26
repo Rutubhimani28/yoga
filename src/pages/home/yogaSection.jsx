@@ -1,6 +1,10 @@
 import { Typography, Grid, Box } from "@mui/material";
 import bg2 from "../../assets/images/bg_2.jpg";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 const YogaSection = () => {
+  const theme = useTheme();
+  const isMdUp = useMediaQuery(theme.breakpoints.down("lg"));
   return (
     <Grid
       container
@@ -27,6 +31,7 @@ const YogaSection = () => {
         display="flex"
         flexDirection="column"
         justifyContent="center"
+        alignItems={isMdUp ? "center" : "flex-start"}
         px={{ xs: 2, sm: 3, md: 4 }}
       >
         <Typography
@@ -35,7 +40,7 @@ const YogaSection = () => {
           gutterBottom
           align="center"
           textTransform={"uppercase"}
-          textAlign={"left"}
+          textAlign={isMdUp ? "center" : "left"}
         >
           Strengthen Body, Calm Mind
         </Typography>
@@ -43,7 +48,7 @@ const YogaSection = () => {
           variant="body1"
           color="text.secondary"
           align="center"
-          textAlign={"left"}
+          textAlign={isMdUp ? "center" : "left"}
         >
           Experience holistic wellness with expert guidance and peaceful
           surroundings.
@@ -53,7 +58,7 @@ const YogaSection = () => {
           color="text.secondary"
           align="center"
           className="whitespace-pre-line max-w-[80ch] mx-auto"
-          textAlign={"left"}
+          textAlign={isMdUp ? "center" : "left"}
         >
           Discover peace and strength through mindful yoga practice. Our classes
           help you connect body and mind for lasting wellness.

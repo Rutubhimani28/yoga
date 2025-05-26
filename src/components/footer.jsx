@@ -33,19 +33,36 @@ const Footer = () => {
               <h6 className="font-bold mb-4 text-lg">Explore</h6>
               <ul className="list-none p-0 m-0">
                 {[
-                  { name: "About", icon: <Home fontSize="small" /> },
-                  { name: "Contact", icon: <Mail fontSize="small" /> },
-                  { name: "Classes", icon: <Book fontSize="small" /> },
+                  {
+                    name: "About",
+                    icon: <Home fontSize="small" />,
+                    href: "/about",
+                  },
+                  {
+                    name: "Contact",
+                    icon: <Mail fontSize="small" />,
+                    href: "/contact",
+                  },
+                  {
+                    name: "Classes",
+                    icon: <Book fontSize="small" />,
+                    href: "/classes",
+                  },
                   {
                     name: "Schedule",
                     icon: <CalendarToday fontSize="small" />,
+                    href: "/schedule",
                   },
-                  { name: "Blog", icon: <Chat fontSize="small" /> },
+                  {
+                    name: "Blog",
+                    icon: <Chat fontSize="small" />,
+                    href: "/blog",
+                  },
                 ].map((item) => (
                   <li key={item.name} className="mb-2 flex items-center">
                     <span className="mr-2 text-gray-500">{item.icon}</span>
                     <a
-                      href="#"
+                      href={item.href}
                       className="text-current hover:text-blue-600 text-sm transition-colors"
                     >
                       {item.name}
