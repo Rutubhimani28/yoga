@@ -17,7 +17,6 @@ const YogaDetails = () => {
 
   return (
     <Box className="relative overflow-hidden h-[400px] md:h-[500px] flex items-center justify-center">
-      {/* Background Image with Overlay */}
       <MotionBox
         style={{ y: yPos }}
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-fixed z-[-1]"
@@ -29,7 +28,6 @@ const YogaDetails = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
       </MotionBox>
 
-      {/* Stats Grid */}
       <Grid
         container
         spacing={3}
@@ -37,7 +35,7 @@ const YogaDetails = () => {
       >
         {stats.map((stat, index) => (
           <Grid
-          size={{ xs: 6, md: 3 }}
+            size={{ xs: 6, md: 3 }}
             key={index}
             className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-lg transition-transform duration-300 hover:-translate-y-1 hover:bg-white/20"
           >
