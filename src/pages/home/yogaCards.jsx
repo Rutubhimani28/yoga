@@ -32,20 +32,13 @@ const YogaCards = () => {
       spacing={4}
       justifyContent="center"
       alignItems="stretch"
-      className="py-10 bg-[#f7f7f7]"
+      className="py-10 bg-[#f7f7f7] px-5"
     >
       {yogaFeatures.map((feature, index) => (
         <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index} className="flex">
-          <Card
-            className="max-w-[400px] rounded-md shadow-sm flex-grow transition-all duration-300 ease-in-out hover:shadow-md hover:scale-[1.02]"
-
-          >
-            <CardContent
-              className="text-center p-4 flex flex-col h-full justify-center"
-            >
-              <Box
-                className="w-20 h-20 rounded-full mx-auto flex items-center justify-center mb-3 bg-[linear-gradient(135deg,_#f3e5f5_0%,_#fce4ec_100%)]"
-              >
+          <Card className="max-w-[400px] rounded-md shadow-sm flex-grow transition-all duration-300 ease-in-out hover:shadow-md hover:scale-[1.02] mx-auto sm:mx-0">
+            <CardContent className="text-center p-4 flex flex-col h-full justify-center">
+              <Box className="w-20 h-20 rounded-full mx-auto flex items-center justify-center mb-3 bg-[linear-gradient(135deg,_#f3e5f5_0%,_#fce4ec_100%)]">
                 {feature.icon}
               </Box>
               <Typography
