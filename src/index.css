@@ -21,7 +21,8 @@
 .slider-herosection-description {
     font-family: 'Montserrat, sans-serif ' !important;
 }
-.main-banner:after{
+
+.main-banner:after {
     content: "";
     position: absolute;
     top: 0;
@@ -30,4 +31,8 @@
     height: 100%;
     opacity: 0.6;
     background-color: black;
+}
+
+.yogacontent-background {
+    background-image: url('assets/images/bg_3.jpg');
 }

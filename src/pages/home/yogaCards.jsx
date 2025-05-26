@@ -35,65 +35,29 @@ const YogaCards = () => {
       className="py-10 bg-[#f7f7f7]"
     >
       {yogaFeatures.map((feature, index) => (
-        <Grid item size={{ xs: 12, sm: 6 , md :3}} key={index} display="flex">
+        <Grid item size={{ xs: 12, sm: 6, md: 3 }} key={index} display="flex">
           <Card
-            sx={{
-              maxWidth: 400,
-              borderRadius: 3,
-              boxShadow: 1,
-              "&:hover": {
-                boxShadow: 3,
-                transform: "scale(1.02)",
-              },
-              transition: "all 0.3s ease",
-              flexGrow: 1,
-            }}
+            className="max-w-[400px] rounded-md shadow-sm flex-grow transition-all duration-300 ease-in-out hover:shadow-md hover:scale-[1.02]"
+
           >
             <CardContent
-              sx={{
-                textAlign: "center",
-                p: 4,
-                display: "flex",
-                flexDirection: "column",
-                height: "100%",
-                justifyContent: "center",
-              }}
+              className="text-center p-4 flex flex-col h-full justify-center"
             >
               <Box
-                sx={{
-                  background:
-                    "linear-gradient(135deg, #f3e5f5 0%, #fce4ec 100%)",
-                  width: 80,
-                  height: 80,
-                  borderRadius: "50%",
-                  mx: "auto",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  mb: 3,
-                }}
+                className="w-20 h-20 rounded-full mx-auto flex items-center justify-center mb-3 bg-[linear-gradient(135deg,_#f3e5f5_0%,_#fce4ec_100%)]"
               >
                 {feature.icon}
               </Box>
               <Typography
                 variant="h5"
                 component="h3"
-                sx={{
-                  fontWeight: "bold",
-                  color: "text.primary",
-                  mb: 2,
-                  fontSize: "1.5rem",
-                }}
+                className="font-bold text-gray-900 mb-2 text-[1.5rem]"
               >
                 {feature.title}
               </Typography>
               <Typography
                 variant="body1"
-                sx={{
-                  color: "text.secondary",
-                  lineHeight: 1.6,
-                  fontSize: "1.1rem",
-                }}
+                className="!text-gray-600 !leading-[1.6] !text-[1.1rem]"
               >
                 {feature.description}
               </Typography>
