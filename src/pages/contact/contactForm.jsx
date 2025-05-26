@@ -2,8 +2,8 @@ import { Box, Typography, TextField, Button, Container } from "@mui/material";
 import contactImage from "../../assets/images/classes-1.jpg";
 const ContactForm = () => {
   return (
-    <Container maxWidth="lg" display="flex" justifyContent="space-between">
-      <Box className="flex flex-col lg:flex-row w-full gap-x-10 items-center justify-center bg-white p-4">
+    <Container maxWidth="lg" className="flex justify-between"  >
+      <Box className="flex flex-col lg:flex-row w-full gap-x-10 items-center justify-center bg-white p-4 py-19">
         <Box className="w-full lg:w-1/2 mt-10 lg:mt-0 lg:pl-10 flex justify-center">
           <img
             src={contactImage}
@@ -57,7 +57,7 @@ const ContactForm = () => {
           </Box>
 
           <Box className="mt-6">
-            <Button className="!bg-gray-500 hover:!bg-gray-600 !text-white px-6 py-2 rounded shadow">
+            <Button className=" bg-gradient-to-r from-gray-600 to-gray-800 !text-white py-3 px-4 rounded-lg font-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">
               Send Message
             </Button>
           </Box>

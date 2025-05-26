@@ -4,6 +4,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 
 const YogaCards = () => {
+
   const yogaFeatures = [
     {
       title: "Outdoor Activities",
@@ -24,20 +25,21 @@ const YogaCards = () => {
       icon: <EmojiEmotionsIcon color="secondary" className="font-[40px]" />,
     },
   ];
+  
   return (
     <Grid
       container
-      mt={2}
-      mb={2}
+      mb={1}
+      py={9}
       spacing={4}
       justifyContent="center"
       alignItems="stretch"
       className="py-10 bg-[#f7f7f7]"
     >
       {yogaFeatures.map((feature, index) => (
-        <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index} className="flex">
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 3 }} key={index} className="flex justify-center">
           <Card
-            className="max-w-[400px] rounded-md shadow-sm flex-grow transition-all duration-300 ease-in-out hover:shadow-md hover:scale-[1.02]"
+            className="max-w-[400px] rounded-md shadow-sm flex-grow transition-all duration-300 ease-in-out hover:shadow-md hover:scale-[1.02] mx-4"
 
           >
             <CardContent
@@ -51,7 +53,7 @@ const YogaCards = () => {
               <Typography
                 variant="h5"
                 component="h3"
-                className="font-bold text-gray-900 mb-2 text-[1.5rem]"
+                className="!font-bold text-gray-900 !mb-2 !text-[1.5rem]"
               >
                 {feature.title}
               </Typography>

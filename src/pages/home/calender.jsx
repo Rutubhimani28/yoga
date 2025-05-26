@@ -221,9 +221,9 @@ const CalenderYoga = () => {
 
     if (!event) {
       return (
-        <div className="flex justify-center items-center text-gray-400 text-xl">
+        <Box className="flex justify-center items-center text-gray-400 text-xl">
           ×
-        </div>
+        </Box>
       );
     }
     return (
@@ -245,19 +245,17 @@ const CalenderYoga = () => {
     );
   };
   return (
-    <Box py={4} px={2}>
+    <Box py={6} px={2}>
       <Container maxWidth="lg">
-        {pathname !== "/schedule" && (
           <Typography
             variant="h5"
             align="center"
-            mb={2}
+            mb={4}
             gutterBottom
             className="!font-bold"
           >
             YOGA SCHEDULE
           </Typography>
-        )}
         <Box
           className="overflow-x-auto border border-[#ccc] rounded-md"
         >
@@ -296,14 +294,14 @@ const CalenderYoga = () => {
         <Box display="flex" justifyContent="space-between" mt={3}>
           <Button
             onClick={handlePrevMonth}
-            className=" !bg-gradient-to-r from-gray-600 to-gray-800 !text-white font-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded mr-2"
+            className=" !bg-gradient-to-r from-gray-600 to-gray-800 !text-white !sm:text-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded mr-2 !text-[10px]"
           >
             ← {currentMonth.subtract(1, "month").format("MMMM YYYY")}
           </Button>
 
           <Button
             onClick={handleNextMonth}
-            className="!bg-gradient-to-r from-gray-600 to-gray-800 !text-white  font-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded"
+            className="!bg-gradient-to-r from-gray-600 to-gray-800 !text-white !sm:text-medium hover:from-gray-500 hover:to-gray-600 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg px-4 py-2 rounded !text-[10px]"
           >
             {currentMonth.add(1, "month").format("MMMM YYYY")} →
           </Button>
