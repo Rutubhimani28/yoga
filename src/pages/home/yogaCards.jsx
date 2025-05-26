@@ -53,7 +53,7 @@ const YogaCards = () => {
               <Typography
                 variant="h5"
                 component="h3"
-                className="font-bold text-gray-900 mb-2 text-[1.5rem]"
+                className="!font-bold text-gray-900 !mb-2 !text-[1.5rem]"
               >
                 {feature.title}
               </Typography>
