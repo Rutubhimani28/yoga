@@ -59,11 +59,8 @@ const Header = () => {
               isScrolled ? "!text-gray-800" : "!text-white"
             }`}
           >
-            <img
-              src={logo}
-              height={100}
-              width={100}
-              className="filter grayscale brightness-[9] contrast-[.5]"
+            <img src={logo} height={100} width={100}   className={`transition-all duration-300 ${isScrolled ? "filter grayscale brightness-[1] contrast-[.5]" : "filter grayscale brightness-[10] contrast-[.5]"}`}
+
             />
           </Typography>
 
@@ -125,23 +122,19 @@ const Header = () => {
             >
               <Button
                 fullWidth
-                className={`justify-start text-left normal-case ${
+                className={`justify-start text-left normal-case  ${
                   isActive(item.path)
-                    ? "!text-gray-800 !bg-gray-100 font-medium"
+                    ? "!text-gray-800 font-medium !border-b-4 !border-gray-500"
                     : "!text-gray-600 hover:!bg-gray-100"
                 }`}
                 sx={{
                   justifyContent: "flex-start",
                   textTransform: "none",
-                  borderRadius: "4px",
                   padding: "8px 16px",
                   marginBottom: "4px",
                 }}
               >
                 {item.label}
-                {isActive(item.path) && (
-                  <span className="ml-auto w-1 h-6 bg-gray-800 rounded-full"></span>
-                )}
               </Button>
             </Link>
           ))}
