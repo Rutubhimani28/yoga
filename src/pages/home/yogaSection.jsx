@@ -5,12 +5,11 @@ const YogaSection = () => {
   return (
     <Grid
       container
-      mt={1}
       mb={1}
       spacing={4}
       justifyContent="center"
       alignItems="center"
-      className="py-5"
+      className="!py-19"
     >
       <Grid size={{ xs: 12, md: 6 }} display="flex" justifyContent="center">
         <Box

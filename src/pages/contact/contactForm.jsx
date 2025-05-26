@@ -2,8 +2,8 @@ import { Box, Typography, TextField, Button, Container } from "@mui/material";
 import contactImage from "../../assets/images/classes-1.jpg";
 const ContactForm = () => {
   return (
-    <Container maxWidth="lg" display="flex" justifyContent="space-between">
-      <Box className="flex flex-col lg:flex-row w-full gap-x-10 items-center justify-center bg-white p-4">
+    <Container maxWidth="lg" display="flex" justifyContent="space-between" >
+      <Box className="flex flex-col lg:flex-row w-full gap-x-10 items-center justify-center bg-white p-4 py-19">
         <Box className="w-full lg:w-1/2 mt-10 lg:mt-0 lg:pl-10 flex justify-center">
           <img
             src={contactImage}

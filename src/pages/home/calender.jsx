@@ -245,13 +245,13 @@ const CalenderYoga = () => {
     );
   };
   return (
-    <Box py={4} px={2}>
+    <Box py={6} px={2}>
       <Container maxWidth="lg">
         {pathname !== "/schedule" && (
           <Typography
             variant="h5"
             align="center"
-            mb={2}
+            mb={4}
             gutterBottom
             className="!font-bold"
           >

@@ -1,9 +1,15 @@
-import { Card, CardContent, Typography, Button, Box } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  Typography,
+  Button,
+  Box,
+  Grid,
+} from "@mui/material";
 import { CalendarDays, ChevronRight } from "lucide-react";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import postFirst from "../../assets/images/image_1.jpg";
-import postsecond from "../../assets/images/image_2.jpg";
+import postSecond from "../../assets/images/image_2.jpg";
 import postThird from "../../assets/images/image_3.jpg";
 
 const posts = [
@@ -19,7 +25,7 @@ const posts = [
     date: "OCT 10, 2020",
     title: "Morning Yoga for a Fresh Start",
     desc: "Learn the benefits of morning yoga routines to energize your body and calm your mind.",
-    image: postsecond,
+    image: postSecond,
   },
   {
     id: 3,
@@ -29,6 +35,7 @@ const posts = [
     image: postThird,
   },
 ];
+
 const posts1 = [
   {
     id: 1,
@@ -42,7 +49,7 @@ const posts1 = [
     date: "OCT 10, 2020",
     title: "Morning Yoga for a Fresh Start",
     desc: "Start your day with energizing yoga sequences to set a positive tone.",
-    image: postsecond,
+    image: postSecond,
   },
   {
     id: 3,
@@ -55,76 +62,39 @@ const posts1 = [
 
 const RecentPost = () => {
   const { pathname } = useLocation();
+  const displayPosts = pathname === "/blog" ? posts1 : posts;
+
   return (
-    <Box className="py-16 bg-gray-50 mb-5 mt-5">
+    <Box className="py-16 mb-5 mt-5">
       <Box className="max-w-7xl mx-auto px-4 text-center">
         {pathname !== "/blog" && (
           <>
-            <p className="text-grey-500 font-medium mb-2">Our Blog</p>
+            <p className="text-gray-500 font-medium mb-2">Our Blog</p>
             <h2 className="text-3xl font-bold mb-12">RECENT POST</h2>
           </>
         )}
 
-        <Box className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-6">
-          {posts.map((post) => (
-            <Card
-              key={post.id}
-              className="shadow-lg rounded-xl overflow-hidden"
-            >
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-52 object-cover"
-              />
-              <CardContent className="text-left space-y-3">
-                <Box className="flex items-center space-x-2">
-                  <span className="bg-gray-400 text-white text-xs px-2 py-1 rounded flex items-center">
-                    <CalendarDays className="w-4 h-4 mr-1" /> {post.date}
-                  </span>
-                </Box>
-                <Typography variant="h6" className="font-bold text-gray-800">
-                  {post.title}
-                </Typography>
-                <Typography variant="body2" className="text-gray-600">
-                  {post.desc}
-                </Typography>
-
-                <Box className="mt-4">
-                  <Link
-                    to={pathname}
-                    onClick={() =>
-                      window.scrollTo({ top: 0, behavior: "smooth" })
-                    }
-                  >
-                    <Button className="!rounded-full !min-w-0 !p-2 !border-gray-500 hover:!border-gray-800">
-                      <ChevronRight className="w-5 h-5 text-gray-700 hover:text-gray-600" />
-                    </Button>
-                  </Link>
-                </Box>
-              </CardContent>
-            </Card>
-          ))}
-
-          {pathname === "/blog" &&
-            posts1.map((post) => (
-              <Card
-                key={post.id}
-                className="shadow-lg rounded-xl overflow-hidden"
-              >
+        <Grid container spacing={4} justifyContent="center">
+          {displayPosts.map((post) => (
+            <Grid size={{xs:12,md:6,lg:4}}  key={post.id}>
+              <Card className="shadow-lg rounded-xl overflow-hidden h-full flex flex-col">
                 <img
                   src={post.image}
                   alt={post.title}
                   className="w-full h-52 object-cover"
                 />
-                <CardContent className="text-left space-y-3">
+                <CardContent className="text-left space-y-3 flex flex-col flex-grow">
                   <Box className="flex items-center space-x-2">
                     <span className="bg-gray-400 text-white text-xs px-2 py-1 rounded flex items-center">
-                      <CalendarDays className="w-4 h-4 mr-1" /> {post.date}
+                      <CalendarDays className="w-4 h-4 mr-1" />
+                      {post.date}
                     </span>
                   </Box>
+
                   <Typography variant="h6" className="font-bold text-gray-800">
                     {post.title}
                   </Typography>
+
                   <Typography variant="body2" className="text-gray-600">
                     {post.desc}
                   </Typography>
@@ -143,8 +113,9 @@ const RecentPost = () => {
                   </Box>
                 </CardContent>
               </Card>
-            ))}
-        </Box>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </Box>
   );

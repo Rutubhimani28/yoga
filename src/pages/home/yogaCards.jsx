@@ -29,8 +29,8 @@ const YogaCards = () => {
   return (
     <Grid
       container
-      mt={2}
-      mb={2}
+      mb={1}
+      py={9}
       spacing={4}
       justifyContent="center"
       alignItems="stretch"
