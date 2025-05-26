@@ -8,110 +8,139 @@ import {
   Book,
   Chat,
 } from "@mui/icons-material";
+import {
+  Box,
+  Typography,
+  Grid,
+  IconButton,
+  Divider,
+} from "@mui/material";
 import recentFirst from "../assets/images/classes-3.jpg";
 import recentSecond from "../assets/images/classes-4.jpg";
 const Footer = () => {
+  const menuItems = [
+    { name: "About", icon: <Home fontSize="small" /> },
+    { name: "Contact", icon: <Mail fontSize="small" /> },
+    { name: "Classes", icon: <Book fontSize="small" /> },
+    { name: "Schedule", icon: <CalendarToday fontSize="small" /> },
+    { name: "Blog", icon: <Chat fontSize="small" /> },
+  ];
+
   return (
-    <footer className="bg-gray-50 py-12 px-4 sm:px-6 md:px-10 text-gray-800 mt-3">
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h5 className="font-bold mb-4 text-xl">Yogabest</h5>
-              <p className="mb-4 text-sm">
+    <Box component="footer" sx={{ bgcolor: "#f9fafb", color: "#1f2937", py: 12, px: { xs: 4, sm: 6, md: 10 }, mt: 3 }}>
+      <Box sx={{ maxWidth: "1280px", mx: "auto" }}>
+        <Grid container spacing={6}>
+          <Grid container spacing={4}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }} >
+              <Typography variant="h6" fontWeight="bold" gutterBottom>
+                Yogabest
+              </Typography>
+              <Typography variant="body2" color="text.secondary" gutterBottom>
                 Discover inner peace and wellness through mindful yoga practices
                 that nurture your body, mind, and soul.
-              </p>
-              <div className="flex gap-4">
-                <Facebook className="text-gray-600 hover:text-blue-600 cursor-pointer" />
-                <Twitter className="text-gray-600 hover:text-blue-400 cursor-pointer" />
-                <Instagram className="text-gray-600 hover:text-pink-600 cursor-pointer" />
-              </div>
-            </div>
+              </Typography>
+              <Box sx={{ display: "flex", gap: 2, mt: 2 }}>
+                <IconButton sx={{ color: "gray", "&:hover": { color: "#1877f2" } }}>
+                  <Facebook />
+                </IconButton>
+                <IconButton sx={{ color: "gray", "&:hover": { color: "#1DA1F2" } }}>
+                  <Twitter />
+                </IconButton>
+                <IconButton sx={{ color: "gray", "&:hover": { color: "#E1306C" } }}>
+                  <Instagram />
+                </IconButton>
+              </Box>
+            </Grid>
 
-            <div>
-              <h6 className="font-bold mb-4 text-lg">Explore</h6>
-              <ul className="list-none p-0 m-0">
-                {[
-                  { name: "About", icon: <Home fontSize="small" /> },
-                  { name: "Contact", icon: <Mail fontSize="small" /> },
-                  { name: "Classes", icon: <Book fontSize="small" /> },
-                  {
-                    name: "Schedule",
-                    icon: <CalendarToday fontSize="small" />,
-                  },
-                  { name: "Blog", icon: <Chat fontSize="small" /> },
-                ].map((item) => (
-                  <li key={item.name} className="mb-2 flex items-center">
-                    <span className="mr-2 text-gray-500">{item.icon}</span>
-                    <a
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }} >
+              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+                Explore
+              </Typography>
+              <Box component="ul" sx={{ listStyle: "none", p: 0, m: 0 }}>
+                {menuItems.map((item) => (
+                  <Box
+                    component="li"
+                    key={item.name}
+                    sx={{ display: "flex", alignItems: "center", mb: 1 }}
+                  >
+                    <Box sx={{ mr: 1, color: "gray" }}>{item.icon}</Box>
+                    <Typography
+                      component="a"
                       href="#"
-                      className="text-current hover:text-blue-600 text-sm transition-colors"
+                      variant="body2"
+                      sx={{
+                        color: "inherit",
+                        textDecoration: "none",
+                        "&:hover": { color: "#2563eb" },
+                        transition: "color 0.3s",
+                      }}
                     >
                       {item.name}
-                    </a>
-                  </li>
+                    </Typography>
+                  </Box>
                 ))}
-              </ul>
-            </div>
-          </div>
+              </Box>
+            </Grid>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h6 className="font-bold mb-4 text-lg">Recent Blog</h6>
-              <div className="mb-4 flex gap-4">
-                <div className="w-16 h-16 bg-gray-200 rounded-md overflow-hidden">
-                  <img
-                    src={recentFirst}
-                    alt="Yoga practice"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="mb-1 text-sm">
-                    Yoga practices to boost happiness
-                  </p>
-                  <p className="text-xs text-gray-500">June 15, 2023</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-16 h-16 bg-gray-200 rounded-md overflow-hidden">
-                  <img
-                    src={recentSecond}
-                    alt="Yoga practice"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="mb-1 text-sm">
-                    Yoga practices to boost happiness
-                  </p>
-                  <p className="text-xs text-gray-500">May 28, 2023</p>
-                </div>
-              </div>
-            </div>
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }} >
+              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+                Recent Blog
+              </Typography>
+              {[{ img: recentFirst, date: "June 15, 2023" }, { img: recentSecond, date: "May 28, 2023" }].map(
+                (blog, idx) => (
+                  <Box key={idx} sx={{ display: "flex", gap: 2, mb: 2 }}>
+                    <Box
+                      sx={{
+                        width: 64,
+                        height: 64,
+                        borderRadius: 1,
+                        overflow: "hidden",
+                        bgcolor: "grey.200",
+                      }}
+                    >
+                      <img
+                        src={blog.img}
+                        alt="Yoga practice"
+                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      />
+                    </Box>
+                    <Box>
+                      <Typography variant="body2" gutterBottom>
+                        Yoga practices to boost happiness
+                      </Typography>
+                      <Typography variant="caption" color="text.secondary">
+                        {blog.date}
+                      </Typography>
+                    </Box>
+                  </Box>
+                )
+              )}
+            </Grid>
 
-            <div>
-              <h6 className="font-bold mb-4 text-lg">Have a Question?</h6>
-              <address className="not-italic">
-                <p className="mb-2 text-sm">
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }} >
+              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+                Have a Question?
+              </Typography>
+              <address style={{ fontStyle: "normal" }}>
+                <Typography variant="body2" gutterBottom>
                   203 Fake St. Mountain View, San Francisco, California, USA
-                </p>
-                <p className="mb-2 text-sm">+2 392 3939 210</p>
-                <p className="text-sm">info@yourdomain.com</p>
+                </Typography>
+                <Typography variant="body2" gutterBottom>
+                  +2 392 3939 210
+                </Typography>
+                <Typography variant="body2">info@yourdomain.com</Typography>
               </address>
-            </div>
-          </div>
-        </div>
+            </Grid>
+          </Grid> 
+        </Grid>
 
-        <div className="border-t border-gray-300 my-8"></div>
+        <Divider sx={{ my: 8 }} />
 
-        <p className="text-center text-sm">
+        <Typography variant="body2" align="center" color="text.secondary">
           © {new Date().getFullYear()} Yogabest. All rights reserved.
-        </p>
-      </div>
-    </footer>
+        </Typography>
+      </Box>
+    </Box>
   );
 };
-
 export default Footer;
