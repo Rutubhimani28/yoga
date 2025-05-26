@@ -8,7 +8,6 @@ const YogaContent = () => {
       spacing={4}
       justifyContent="center"
       alignItems="center"
-      height={"85vh"}
       className="py-4 bg-center bg-cover bg-white/20 bg-blend-overlay opacity-95 yogacontent-background"
     >
       <Grid
