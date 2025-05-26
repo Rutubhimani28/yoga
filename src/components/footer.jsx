@@ -15,11 +15,15 @@ import logo from "../assets/images/logo2.png";
 
 const Footer = () => {
   const menuItems = [
-    { name: "About", icon: <Home fontSize="small" /> },
-    { name: "Contact", icon: <Mail fontSize="small" /> },
-    { name: "Classes", icon: <Book fontSize="small" /> },
-    { name: "Schedule", icon: <CalendarToday fontSize="small" /> },
-    { name: "Blog", icon: <Chat fontSize="small" /> },
+    { name: "About", icon: <Home fontSize="small" />, href: "/about" },
+    { name: "Contact", icon: <Mail fontSize="small" />, href: "/contact" },
+    { name: "Classes", icon: <Book fontSize="small" />, href: "/classes" },
+    {
+      name: "Schedule",
+      icon: <CalendarToday fontSize="small" />,
+      href: "/schedule",
+    },
+    { name: "Blog", icon: <Chat fontSize="small" />, href: "/blog" },
   ];
 
   return (
@@ -39,12 +43,12 @@ const Footer = () => {
         <Grid container spacing={6}>
           <Grid container spacing={4}>
             <Grid size={{ xs: 12, sm: 6, lg: 3.3 }}>
-                <img
-                  src={logo}
-                  width={100}
-                  className="filter grayscale brightness-[2] contrast-[.5]"
-                />
-              <Typography variant="body2" color="text.secondary" >
+              <img
+                src={logo}
+                width={100}
+                className="filter grayscale brightness-[2] contrast-[.5]"
+              />
+              <Typography variant="body2" color="text.secondary">
                 Discover inner peace and wellness through mindful yoga practices
                 that nurture your body, mind, and soul.
               </Typography>
@@ -82,19 +86,19 @@ const Footer = () => {
                     sx={{ display: "flex", alignItems: "center", mb: 1 }}
                   >
                     <Box sx={{ mr: 1, color: "gray" }}>{item.icon}</Box>
-                    <Typography
-                      component="a"
-                      href="#"
-                      variant="body2"
-                      sx={{
-                        color: "inherit",
-                        textDecoration: "none",
-                        "&:hover": { color: "#2563eb" },
-                        transition: "color 0.3s",
-                      }}
-                    >
-                      {item.name}
-                    </Typography>
+                    <Link to={item?.href}>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: "inherit",
+                          textDecoration: "none",
+                          "&:hover": { color: "#2563eb" },
+                          transition: "color 0.3s",
+                        }}
+                      >
+                        {item.name}
+                      </Typography>
+                    </Link>
                   </Box>
                 ))}
               </Box>

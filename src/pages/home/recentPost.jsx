@@ -98,19 +98,6 @@ const RecentPost = () => {
                   <Typography variant="body2" className="text-gray-600">
                     {post.desc}
                   </Typography>
-
-                  <Box className="mt-4">
-                    <Link
-                      to="/blog"
-                      onClick={() =>
-                        window.scrollTo({ top: 0, behavior: "smooth" })
-                      }
-                    >
-                      <Button className="!rounded-full !min-w-0 !p-2 !border-gray-500 hover:!border-gray-800">
-                        <ChevronRight className="w-5 h-5 text-gray-700 hover:text-gray-600" />
-                      </Button>
-                    </Link>
-                  </Box>
                 </CardContent>
               </Card>
             </Grid>
