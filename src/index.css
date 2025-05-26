@@ -36,3 +36,11 @@
 .yogacontent-background {
     background-image: url('assets/images/bg_3.jpg');
 }
+
+.yoga-Details-img {
+    background-image: url('assets/images/about.jpg');
+}
+
+.calender-cell {
+    height: 100px !important;
+}
