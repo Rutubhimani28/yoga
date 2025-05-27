@@ -4,6 +4,9 @@ import { useLocation } from "react-router-dom";
 import postFirst from "../../assets/images/image_1.jpg";
 import postSecond from "../../assets/images/image_2.jpg";
 import postThird from "../../assets/images/image_3.jpg";
+import postFourth from "../../assets/images/classes-6.jpg";
+import postFifth from "../../assets/images/classes-7.jpg";
+import postSix from "../../assets/images/classes-5.jpg";
 
 const posts = [
   {
@@ -33,23 +36,23 @@ const posts1 = [
   {
     id: 1,
     date: "OCT 10, 2020",
-    title: "The Power of Daily Yoga Practice",
-    desc: "Yoga is more than exercise—it's a path to self-discovery and holistic health.",
-    image: postFirst,
+    title: "Yoga for Beginners: Essential Poses to Start Your Journey",
+    desc: "New to yoga? Discover the foundational poses that will help you build strength, flexibility, and confidence in your practice.",
+    image: postFourth,
   },
   {
     id: 2,
     date: "OCT 10, 2020",
-    title: "Morning Yoga for a Fresh Start",
-    desc: "Start your day with energizing yoga sequences to set a positive tone.",
-    image: postSecond,
+    title: "The Science Behind Yoga's Stress-Relief Benefits",
+    desc: "Explore how regular yoga practice affects your nervous system and helps reduce cortisol levels for better stress management.",
+    image: postFifth,
   },
   {
     id: 3,
     date: "OCT 10, 2020",
-    title: "Mastering Your Breath with Yoga",
-    desc: "Breath awareness in yoga leads to better emotional regulation and balance.",
-    image: postThird,
+    title: "Advanced Yoga Poses to Challenge Your Practice",
+    desc: "Ready to level up? Learn about advanced asanas that will test your balance, strength, and focus while deepening your practice.",
+    image: postSix,
   },
 ];
 
@@ -75,8 +78,8 @@ const RecentPost = () => {
                   className="w-full h-52 object-cover"
                 />
                 <CardContent className="text-left space-y-3 flex flex-col flex-grow">
-                  <Box className="flex items-center space-x-2">
-                    <span className="bg-gray-400 text-white text-xs px-2 py-1 rounded flex items-center">
+                  <Box className="flex justify-center  items-center space-x-2">
+                    <span className="bg-gray-400 text-white text-xs px-2 py-2.5  rounded flex items-center">
                       <CalendarDays className="w-4 h-4 mr-1" />
                       {post.date}
                     </span>
@@ -104,8 +107,8 @@ const RecentPost = () => {
                     className="w-full h-52 object-cover"
                   />
                   <CardContent className="text-left space-y-3 flex flex-col flex-grow">
-                    <Box className="flex items-center space-x-2">
-                      <span className="bg-gray-400 text-white text-xs px-2 py-1 rounded flex items-center">
+                    <Box className="flex justify-center items-center space-x-2">
+                      <span className="bg-gray-400 text-white text-xs px-2 py-2.5 rounded flex items-center">
                         <CalendarDays className="w-4 h-4 mr-1" />
                         {post.date}
                       </span>
