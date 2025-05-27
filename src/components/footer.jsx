@@ -30,17 +30,11 @@ const Footer = () => {
   return (
     <Box
       component="footer"
-      sx={{
-        bgcolor: "#f9fafb",
-        color: "#1f2937",
-        pt: 10,
-        pb: 8,
-
-        px: { xs: 4, sm: 6, md: 10 },
-        mt: 3,
-      }}
+      className="bg-[#f9fafb] text-[#1f2937] pt-12 pb-10 px-4 sm:px-6 md:px-10 mt-3"
     >
-      <Box sx={{ maxWidth: "1280px", mx: "auto" }}>
+      <Box
+        className="max-w-[1280px] mx-auto"
+      >
         <Grid container spacing={6}>
           <Grid container spacing={4}>
             <Grid size={{ xs: 12, sm: 6, lg: 3.3 }}>
@@ -53,20 +47,16 @@ const Footer = () => {
                 Discover inner peace and wellness through mindful yoga practices
                 that nurture your body, mind, and soul.
               </Typography>
-              <Box sx={{ display: "flex", gap: 2, mt: 1 }}>
-                <IconButton
-                  sx={{ color: "gray", "&:hover": { color: "#1877f2" } }}
-                >
+              <Box
+                className="flex gap-2 mt-1"
+              >
+                <IconButton className="text-gray-500 hover:!text-[#1877f2]">
                   <Facebook />
                 </IconButton>
-                <IconButton
-                  sx={{ color: "gray", "&:hover": { color: "#1DA1F2" } }}
-                >
+                <IconButton className="text-gray-500 hover:!text-[#1DA1F2]">
                   <Twitter />
                 </IconButton>
-                <IconButton
-                  sx={{ color: "gray", "&:hover": { color: "#E1306C" } }}
-                >
+                <IconButton className="text-gray-500 hover:!text-[#E1306C]">
                   <Instagram />
                 </IconButton>
               </Box>
@@ -81,26 +71,18 @@ const Footer = () => {
               </Typography>
               <Box component="ul" sx={{ listStyle: "none", p: 0, m: 0 }}>
                 {menuItems.map((item) => (
-                  <Box
-                    component="li"
-                    key={item.name}
-                    sx={{ display: "flex", alignItems: "center", mb: 1 }}
-                  >
-                    <Box sx={{ mr: 1, color: "gray" }}>{item.icon}</Box>
-                    <Link to={item?.href}>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "inherit",
-                          textDecoration: "none",
-                          "&:hover": { color: "#2563eb" },
-                          transition: "color 0.3s",
-                        }}
-                      >
+                  <Link to={item?.href} key={item.name}>
+                    <Box
+                      key={item.name}
+                      className="cursor-pointer hover:text-black mb-1.5"
+                    >
+                      <span className="mr-1 text-gray-500 ">{item.icon}</span>
+
+                      <span className="text-inherit no-underline hover:underline underline-offset-4 decoration-2 transition-all duration-300">
                         {item.name}
-                      </Typography>
-                    </Link>
-                  </Box>
+                      </span>
+                    </Box>
+                  </Link>
                 ))}
               </Box>
             </Grid>
@@ -113,24 +95,12 @@ const Footer = () => {
                 { img: recentFirst, date: "June 15, 2023" },
                 { img: recentSecond, date: "May 28, 2023" },
               ].map((blog, idx) => (
-                <Box key={idx} sx={{ display: "flex", gap: 2, mb: 2 }}>
-                  <Box
-                    sx={{
-                      width: 64,
-                      height: 64,
-                      borderRadius: 1,
-                      overflow: "hidden",
-                      bgcolor: "grey.200",
-                    }}
-                  >
+                <Box key={idx} className="flex gap-2 mb-2">
+                  <Box className="w-16 h-16 rounded overflow-hidden bg-gray-200">
                     <img
                       src={blog.img}
                       alt="Yoga practice"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
+                      className="w-full h-full object-cover"
                     />
                   </Box>
                   <Box>
@@ -149,7 +119,7 @@ const Footer = () => {
               <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
                 Have a Question?
               </Typography>
-              <address style={{ fontStyle: "normal" }}>
+              <address className="!not-italic">
                 <Typography variant="body2" gutterBottom>
                   203 Fake St. Mountain View, San Francisco, California, USA
                 </Typography>
@@ -162,7 +132,7 @@ const Footer = () => {
           </Grid>
         </Grid>
 
-        <Divider sx={{ my: 8 }} />
+        <Divider className="!my-8" />
 
         <Typography variant="body2" align="center" color="text.secondary">
           © {new Date().getFullYear()} Yogabest. All rights reserved.
