@@ -78,8 +78,8 @@ const RecentPost = () => {
                   className="w-full h-52 object-cover"
                 />
                 <CardContent className="text-left space-y-3 flex flex-col flex-grow">
-                  <Box className="flex items-center space-x-2">
-                    <span className="bg-gray-400 text-white text-xs px-2 py-1 rounded flex items-center">
+                  <Box className="flex justify-center  items-center space-x-2">
+                    <span className="bg-gray-400 text-white text-xs px-2 py-2.5  rounded flex items-center">
                       <CalendarDays className="w-4 h-4 mr-1" />
                       {post.date}
                     </span>
@@ -107,8 +107,8 @@ const RecentPost = () => {
                     className="w-full h-52 object-cover"
                   />
                   <CardContent className="text-left space-y-3 flex flex-col flex-grow">
-                    <Box className="flex items-center space-x-2">
-                      <span className="bg-gray-400 text-white text-xs px-2 py-1 rounded flex items-center">
+                    <Box className="flex justify-center items-center space-x-2">
+                      <span className="bg-gray-400 text-white text-xs px-2 py-2.5 rounded flex items-center">
                         <CalendarDays className="w-4 h-4 mr-1" />
                         {post.date}
                       </span>
